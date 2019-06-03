@@ -24,6 +24,7 @@
   "author": "ulivz<chl814@foxmail.com>",
   "license": "MIT",
   "dependencies": {
+    "vue-feather-icons": "^4.21.0",
     "vuepress-plugin-blog": "latest",
     "@vuepress/plugin-medium-zoom": "next",
     "@vuepress/plugin-nprogress": "next",
