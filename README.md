@@ -1,20 +1,24 @@
-# vuepress-theme-blogging
+# @vuepress/theme-blog
 
-[![NPM version](https://badgen.net/npm/v/vuepress-theme-blogging)](https://npmjs.com/package/vuepress-theme-blogging) [![NPM downloads](https://badgen.net/npm/dm/vuepress-theme-blogging)](https://npmjs.com/package/vuepress-theme-blogging) [![CircleCI](https://badgen.net/circleci/github/ulivz/vuepress-theme-blogging/master)](https://circleci.com/gh/ulivz/vuepress-theme-blogging/tree/master)
+[![NPM version](https://badgen.net/npm/v/@vuepress/theme-blog)](https://npmjs.com/package/@vuepress/theme-blog) [![NPM downloads](https://badgen.net/npm/dm/@vuepress/theme-blog)](https://npmjs.com/package/@vuepress/theme-blog) [![CircleCI](https://badgen.net/circleci/github/ulivz/@vuepress/theme-blog/master)](https://circleci.com/gh/ulivz/@vuepress/theme-blog/tree/master)
 
 ## Install
 
 ```bash
-npm i vuepress-theme-blogging
+yarn add @vuepress/theme-blog -D
+# OR npm install @vuepress/theme-blog -D
 ```
 
 ## Usage
 
 ```js
-const vuepressThemeBlogging = require('vuepress-theme-blogging')
-
-vuepressThemeBlogging()
-//=> foo
+// .vuepress/config.js
+module.exports = {
+  theme: '@vuepress/blog',
+  themeConfig: {
+    // Please head documentation to see the available options.
+  }
+}
 ```
 
 ## Contributing
@@ -28,8 +32,7 @@ vuepressThemeBlogging()
 
 ## Author
 
-**vuepress-theme-blogging** © [ULIVZ](https://github.com/ulivz), Released under the [MIT](./LICENSE) License.<br>
-
+**@vuepress/theme-blog** © [ULIVZ](https://github.com/ulivz), Released under the [MIT](./LICENSE) License.<br>
 
 > [github.com/ulivz](https://github.com/ulivz) · GitHub [@ULIVZ](https://github.com/ulivz) · Twitter [@_ulivz](https://twitter.com/_ulivz)
 
