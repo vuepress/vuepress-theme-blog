@@ -1,4 +1,4 @@
 module.exports = {
-  title: 'vuepress-theme-blogging',
+  title: '@vuepress/theme-blog',
   description: 'A blog theme of VuePress'
 }
