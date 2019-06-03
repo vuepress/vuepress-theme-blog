@@ -1,0 +1,40 @@
+{
+  "name": "@vuepress/theme-blog",
+  "version": "0.0.0",
+  "description": "Official blog theme of VuePress",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "styles",
+    "layouts",
+    "global-components",
+    "fonts",
+    "components"
+  ],
+  "scripts": {
+    "test": "npm run lint && jest",
+    "lint": "disable",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "url": "ulivz/vuepress-theme-blogging",
+    "type": "git"
+  },
+  "author": "ulivz<chl814@foxmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vuepress-plugin-blog": "latest",
+    "@vuepress/plugin-medium-zoom": "next",
+    "@vuepress/plugin-nprogress": "next",
+    "@vuepress/plugin-search": "next",
+    "@vuepress/plugin-pwa": "next"
+  },
+  "devDependencies": {
+    "eslint-config-sherry": "0.0.1",
+    "vuepress": "next"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
