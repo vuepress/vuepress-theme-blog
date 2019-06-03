@@ -18,7 +18,7 @@
     "docs:build": "vuepress build docs"
   },
   "repository": {
-    "url": "ulivz/vuepress-theme-blogging",
+    "url": "ulivz/vuepress-theme-blog",
     "type": "git"
   },
   "author": "ulivz<chl814@foxmail.com>",
