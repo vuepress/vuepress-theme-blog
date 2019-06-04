@@ -20,6 +20,18 @@ yarn add @vuepress/theme-blog -D
 # OR npm install @vuepress/theme-blog -D
 ```
 
+## Progress: 90%
+
+The theme is basicaly finished, but still leaving some important features:
+
+- Enhance the mobile-side styles
+- Built-in RSS integration
+- Built-in site map support
+- Comment integration
+
+**Can't wait to see your contribution!**
+
+
 ## Usage
 
 ```js
