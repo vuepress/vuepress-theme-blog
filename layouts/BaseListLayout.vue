@@ -5,10 +5,10 @@
         <a :href="page.path">{{ page.title }}</a>
       </div>
       <div class="ui-post-summary"><Content :page-key="page.key" slot-key="intro" /></div>
-      <div class="ui-post-author">
+      <div class="ui-post-author" v-if="page.frontmatter.author">
         <NavigationIcon /> <span>{{ page.frontmatter.author }} in {{ page.frontmatter.location }}</span>
       </div>
-      <div class="ui-post-date">
+      <div class="ui-post-date" v-if="page.frontmatter.date">
         <ClockIcon /> <span>{{ new Date(page.frontmatter.date.trim()).toDateString() }}</span>
       </div>
     </div>
