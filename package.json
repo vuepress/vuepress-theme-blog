@@ -1,6 +1,6 @@
 {
   "name": "@vuepress/theme-blog",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Default blog theme for VuePress",
   "main": "index.js",
   "files": [
