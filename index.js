@@ -57,7 +57,7 @@ module.exports = (themeConfig, ctx) => {
         updatePopup: true
       }],
       [
-        'blog',
+        '@vuepress/blog',
         blogPluginOptions,
       ],
     ],
