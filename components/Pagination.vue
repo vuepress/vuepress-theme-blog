@@ -5,19 +5,19 @@
   >
     <router-link
       class="prev"
-      title="上一页"
+      title="Previous Page"
       v-if="pagination.hasPrev"
       :to="pagination.prevLink"
     >
-      上一页
+      Prev
     </router-link>
     <router-link
       class="next"
-      title="下一页"
+      title="Next Page"
       v-if="pagination.hasNext"
       :to="pagination.nextLink"
     >
-      下一页
+      Next
     </router-link>
   </div>
 </template>

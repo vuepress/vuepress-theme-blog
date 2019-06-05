@@ -5,7 +5,8 @@
         <NavLink
           :link="$site.base"
           class="home-link"
-        >{{ $site.title }}</NavLink>
+        >{{ $site.title }}
+        </NavLink>
       </div>
       <div class="header-right-wrap">
         <ul class="nav" v-if="$themeConfig.nav">
@@ -38,7 +39,6 @@
     box-sizing border-box
     // background lighten(#3eaf7c, 90%)
     background-color #FFF
-    font-family Abel, sans-serif
     padding 20px 32px 20px
     margin auto
     border-bottom 1px solid rgba(0, 0, 0, 0.15)
@@ -70,11 +70,13 @@
       margin 0
       letter-spacing 2px
       display block
-      font-weight 900
+      font-family PT Serif, Serif
+
       a
         color #000
+        font-weight 500
         text-decoration none
-  
+    
     .header-right-wrap
       flex 1
       display flex
@@ -86,37 +88,43 @@
         margin 0
         align-items end
         
+        
         .nav-item
           flex 1
           margin-left 20px
           
           a
+            font-family PT Serif, Serif
             font-size 20px
             // color lighten(#3eaf7c, 30%)
             text-decoration none
             transition color .3s
-            
+      
       .search-box
+        font-family PT Serif, Serif
         margin-left 20px
         
         input
           border-radius 5px
           transition all .5s
           border: 1px solid #000
+          
           &:hover
             border: 1px solid $accentColor
             box-shadow 0 0 5px $accentColor
-  
+        
         .suggestions
           border 1px solid #000
           top: 40px
           right 0
+          
           a
             color #000
             text-decoration none
+            
             &.focused
               color $accentColor
-
+  
   @media (max-width: $MQMobile)
     .header-wrapper
       flex-direction column

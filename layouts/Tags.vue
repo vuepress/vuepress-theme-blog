@@ -3,12 +3,3 @@
     <BlogTags :tags="$tag.list"/>
   </div>
 </template>
-
-<script>
-  export default {
-    created() {
-      console.log(this.$tag.list)
-    }
-  }
-</script>
-

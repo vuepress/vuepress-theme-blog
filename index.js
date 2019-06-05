@@ -81,7 +81,6 @@ module.exports = (themeConfig, ctx) => {
    */
   if (themeConfig.summary) {
     config.extendPageData = function (pageCtx) {
-      console.log('extendPageData', pageCtx.path)
       const strippedContent = pageCtx._strippedContent
       if (!strippedContent) {
         return
