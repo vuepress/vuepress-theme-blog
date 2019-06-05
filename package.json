@@ -16,8 +16,8 @@
     "lint": "disable",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "example:dev": "vuepress dev example",
-    "example:build": "vuepress build example"
+    "example:dev": "vuepress dev example --temp example/.temp",
+    "example:build": "vuepress build example --temp example/.temp"
   },
   "repository": {
     "url": "ulivz/vuepress-theme-blog",
@@ -31,7 +31,8 @@
     "@vuepress/plugin-nprogress": "next",
     "@vuepress/plugin-pwa": "next",
     "@vuepress/plugin-search": "next",
-    "vue-feather-icons": "^4.21.0"
+    "vue-feather-icons": "^4.21.0",
+    "remove-markdown": "^0.3.0"
   },
   "devDependencies": {
     "eslint-config-sherry": "0.0.1",

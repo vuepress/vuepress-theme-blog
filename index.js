@@ -1,4 +1,15 @@
+const removeMd = require('remove-markdown')
+
 module.exports = (themeConfig, ctx) => {
+  themeConfig = Object.assign(
+    {},
+    themeConfig,
+    {
+      summary: true,
+      summaryLength: 200
+    }
+  )
+
   const defaultBlogPluginOptions = {
     directories: [
       {
@@ -45,21 +56,44 @@ module.exports = (themeConfig, ctx) => {
     ? modifyBlogPluginOptions(defaultBlogPluginOptions)
     : themeConfig
 
-  return {
-    plugins: [
-      '@vuepress/plugin-nprogress',
-      ['@vuepress/medium-zoom', true],
-      ['@vuepress/search', {
-        searchMaxSuggestions: 10
-      }],
-      ['@vuepress/pwa', {
-        serviceWorker: true,
-        updatePopup: true
-      }],
-      [
-        '@vuepress/blog',
-        blogPluginOptions,
-      ],
+  const plugins = [
+    '@vuepress/plugin-nprogress',
+    ['@vuepress/medium-zoom', true],
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
+    }],
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: true
+    }],
+    [
+      '@vuepress/blog',
+      blogPluginOptions,
     ],
+  ]
+
+  const config = {
+    plugins,
   }
+
+  /**
+   * Generate summary.
+   */
+  if (themeConfig.summary) {
+    config.extendPageData = function (pageCtx) {
+      console.log('extendPageData', pageCtx.path)
+      const strippedContent = pageCtx._strippedContent
+      if (!strippedContent) {
+        return
+      }
+      pageCtx.summary = removeMd(
+        strippedContent
+          .trim()
+          .replace(/^#+\s+(.*)/, '')
+          .slice(0, themeConfig.summaryLength)
+      ) + ' ...'
+    }
+  }
+
+  return config
 }

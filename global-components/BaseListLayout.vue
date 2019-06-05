@@ -5,7 +5,8 @@
         <NavLink :link="page.path">{{ page.title }}</NavLink>
       </div>
       <div class="ui-post-summary">
-        <Content :page-key="page.key" slot-key="intro"/>
+        {{ page.frontmatter.summary || page.summary }}
+       <!-- <Content :page-key="page.key" slot-key="intro"/>-->
       </div>
       <div class="ui-post-author" v-if="page.frontmatter.author">
         <NavigationIcon/>

@@ -1,8 +1,6 @@
-const { name, description } = require('../../package')
-
 module.exports = {
-  name,
-  description,
+  title: 'VuePress Blog Example',
+  description: 'This is a blog example built by VuePress',
   theme: require.resolve('../../'),
   themeConfig: {
     /**

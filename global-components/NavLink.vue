@@ -48,3 +48,12 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+.nav-link
+  color #000
+
+.nav-link
+  &:hover, &.router-link-active
+    color $accentColor
+</style>

@@ -1,12 +1,12 @@
 <template>
   <header id="header">
     <div class="header-wrapper">
-      <h1 class="title">
-        <router-link
-          :to="$site.base"
+      <div class="title">
+        <NavLink
+          :link="$site.base"
           class="home-link"
-        >{{ $site.title }}</router-link>
-      </h1>
+        >{{ $site.title }}</NavLink>
+      </div>
       <div class="header-right-wrap">
         <ul class="nav" v-if="$themeConfig.nav">
           <li class="nav-item" v-for="item in $themeConfig.nav">
@@ -61,7 +61,7 @@
     height 40px
     
     .title
-      flex 0 0 200px
+      /*flex 0 0 200px*/
       // color #3eaf7c
       // color lighten(#3eaf7c, 10%)
       color #000
@@ -92,14 +92,10 @@
           
           a
             font-size 20px
-            color #000
             // color lighten(#3eaf7c, 30%)
             text-decoration none
             transition color .3s
             
-            &:hover
-              color $accentColor
-      
       .search-box
         margin-left 20px
         
