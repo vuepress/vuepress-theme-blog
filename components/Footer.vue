@@ -22,7 +22,6 @@
 </template>
 
 <script>
-  import NavLink from './NavLink'
   import {
     GithubIcon,
     FacebookIcon,
@@ -31,7 +30,6 @@
   
   export default {
     components: {
-      NavLink,
       GithubIcon,
       FacebookIcon,
       TwitterIcon,

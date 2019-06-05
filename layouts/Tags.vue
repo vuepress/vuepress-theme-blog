@@ -1,9 +1,7 @@
 <template>
-  <LayoutWrapper class="tags-layout">
-    <div class="main">
-      <BlogTags :tags="$tag.list"/>
-    </div>
-  </LayoutWrapper>
+  <div id="vuperess-theme-blog__tags-layout">
+    <BlogTags :tags="$tag.list"/>
+  </div>
 </template>
 
 <script>
@@ -13,7 +11,4 @@
     }
   }
 </script>
-
-<style lang="stylus">
-</style>
 

@@ -21,13 +21,9 @@
 
 <script>
   import SearchBox from '@SearchBox'
-  import NavLink from './NavLink'
   
   export default {
-    components: {
-      SearchBox,
-      NavLink,
-    },
+    components: { SearchBox },
   }
 </script>
 

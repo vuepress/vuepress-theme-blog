@@ -1,9 +1,9 @@
 <template>
-  <LayoutWrapper>
+  <div id="vuperess-theme-blog__post-layout">
     <!--<h1>{{ $page.title }}</h1>-->
     <Content class="vuepress-blog-theme-content"/>
     <Toc/>
-  </LayoutWrapper>
+  </div>
 </template>
 
 <script>
