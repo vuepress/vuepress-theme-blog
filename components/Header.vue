@@ -66,15 +66,15 @@
       // color lighten(#3eaf7c, 10%)
       color #000
       font-size 30px
-      font-weight bold
       margin 0
       letter-spacing 2px
       display block
-      font-family PT Serif, Serif
+      text-transform uppercase
 
       a
         color #000
-        font-weight 500
+        font-weight bold
+        font-family PT Serif, Serif
         text-decoration none
     
     .header-right-wrap

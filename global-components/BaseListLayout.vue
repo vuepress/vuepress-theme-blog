@@ -65,7 +65,6 @@
       cursor pointer
       color #000
       transition all .2s
-      font-weight bold
       text-decoration none
       
       &:hover
