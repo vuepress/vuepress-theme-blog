@@ -15,7 +15,9 @@
     "test": "npm run lint && jest",
     "lint": "disable",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "example:dev": "vuepress dev example",
+    "example:build": "vuepress build example"
   },
   "repository": {
     "url": "ulivz/vuepress-theme-blog",
@@ -24,16 +26,16 @@
   "author": "ulivz<chl814@foxmail.com>",
   "license": "MIT",
   "dependencies": {
-    "vue-feather-icons": "^4.21.0",
     "@vuepress/plugin-blog": "latest",
     "@vuepress/plugin-medium-zoom": "next",
     "@vuepress/plugin-nprogress": "next",
+    "@vuepress/plugin-pwa": "next",
     "@vuepress/plugin-search": "next",
-    "@vuepress/plugin-pwa": "next"
+    "vue-feather-icons": "^4.21.0"
   },
   "devDependencies": {
     "eslint-config-sherry": "0.0.1",
-    "vuepress": "next"
+    "vuepress": "1.0.0-beta.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
