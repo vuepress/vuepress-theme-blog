@@ -4,7 +4,21 @@
 
 ## Status: WIP
 
-We need to enhance the styles under mobile devices, contribution welcome!
+This theme is still working in progress, here are some things we're going to do, contribution welcome!
+
+- Mobile dropdown menu (Replacement of nav in mobile side)
+- Enhance the final palette
+- Site Map
+- Enhance the mobile-side styles
+- Built-in RSS integration
+- Built-in site map support
+- Comment integration
+- A guide to use this blog theme
+- ... And anything that you think can be better 
+
+
+**Can't wait to see your contribution! ❤️**
+
  
 ## Sites
 
@@ -19,17 +33,6 @@ We need to enhance the styles under mobile devices, contribution welcome!
 yarn add @vuepress/theme-blog -D
 # OR npm install @vuepress/theme-blog -D
 ```
-
-## Progress: 90%
-
-The theme is basicaly finished, but still leaving some important features:
-
-- Enhance the mobile-side styles
-- Built-in RSS integration
-- Built-in site map support
-- Comment integration
-
-**Can't wait to see your contribution!**
 
 
 ## Usage
