@@ -113,7 +113,10 @@
       flex 1
       display flex
       align-items center
-      justify-content flex-end
+      justify-content center
+
+      @media(min-width: $MQNarrow)
+        justify-content flex-end
       
       .copyright
         display flex

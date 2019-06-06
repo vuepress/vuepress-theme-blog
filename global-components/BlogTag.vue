@@ -12,13 +12,14 @@
 
 <style lang="stylus">
   .blog-tag
-    display inline-block
+    display inline-flex
+    align-items center
+    height 45px
     word-break break-word
     font-size 20px
-    line-height 25px
     margin-right 20px
     margin-bottom 20px
-    padding 3px 15px
+    padding 0 15px
     border-radius 5px
     font-weight: 300
     text-align left
