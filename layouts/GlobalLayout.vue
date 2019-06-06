@@ -24,9 +24,8 @@
 
 <style lang="stylus">
   .content-wrapper
-    padding-top 160px
+    padding 160px 15px 80px 15px
     min-height calc(100vh - 80px - 60px - 160px)
     max-width 740px
-    padding-left 20vw
-    padding-bottom 80px
+    margin 0 auto
 </style>

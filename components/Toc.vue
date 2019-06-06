@@ -185,7 +185,7 @@
         padding-left: 1rem * (i - 2);
 
   // for vuepress-toc
-  @media (min-width: $MQNarrow)
+  @media (min-width: 1300px)
     .vuepress-toc
       display: block;
 </style>

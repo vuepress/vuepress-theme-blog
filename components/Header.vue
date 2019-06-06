@@ -41,7 +41,6 @@
     background-color #FFF
     padding 20px 32px 20px
     margin auto
-    border-bottom 1px solid rgba(0, 0, 0, 0.15)
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03), 0 6px 6px rgba(0, 0, 0, 0.05)
     transition: all 1s cubic-bezier(.25, .8, .25, 1)
     
@@ -107,7 +106,7 @@
         input
           border-radius 5px
           transition all .5s
-          border: 1px solid #000
+          border: 1px solid #cecece
           
           &:hover
             border: 1px solid $accentColor
