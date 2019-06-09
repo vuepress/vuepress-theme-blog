@@ -6,7 +6,8 @@ module.exports = (themeConfig, ctx) => {
     themeConfig,
     {
       summary: true,
-      summaryLength: 200
+      summaryLength: 200,
+      pwa: false,
     }
   )
 
@@ -62,15 +63,20 @@ module.exports = (themeConfig, ctx) => {
     ['@vuepress/search', {
       searchMaxSuggestions: 10
     }],
-    ['@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: true
-    }],
     [
       '@vuepress/blog',
       blogPluginOptions,
     ],
   ]
+
+  if (themeConfig.pwa) {
+    plugins.push(
+      ['@vuepress/pwa', {
+        serviceWorker: true,
+        updatePopup: true
+      }],
+    )
+  }
 
   const config = {
     plugins,

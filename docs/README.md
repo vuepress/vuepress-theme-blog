@@ -209,6 +209,25 @@ Whether to extract summary from source markdowns.
 Set the length of summary.
 
 
+### pwa
+
+- Type: `boolean`
+- Default: `false`
+
+Whether to enable PWA support. this option is powered by the [official
+PWA plugin](https://v1.vuepress.vuejs.org/plugin/official/plugin-pwa.html).
+
+if you enable this option, the default options of the internal PWA
+plugin is as follows:
+
+```js
+{
+  serviceWorker: true,
+  updatePopup: true
+}
+```
+
+
 ## Front Matter
 
 ### tag/tags
