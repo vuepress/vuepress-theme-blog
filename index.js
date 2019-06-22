@@ -21,7 +21,7 @@ module.exports = (themeConfig, ctx) => {
         itemLayout: 'Post',
         itemPermalink: '/:year/:month/:day/:slug',
         pagination: {
-          perPagePosts: 5,
+          lengthPerPage: 5,
         },
       },
       {
@@ -32,7 +32,7 @@ module.exports = (themeConfig, ctx) => {
         itemLayout: 'Post',
         itemPermalink: '/archive/:year/:month/:day/:slug',
         pagination: {
-          perPagePosts: 5,
+          lengthPerPage: 5,
         },
       },
     ],
@@ -41,8 +41,8 @@ module.exports = (themeConfig, ctx) => {
         id: "tag",
         keys: ['tag', 'tags'],
         path: '/tag/',
-        layout: 'Tags',
-        frontmatter: { title: 'Tags' },
+        layout: 'Tag',
+        frontmatter: { title: 'Tag' },
         itemlayout: 'Tag',
         pagination: {
           perPagePosts: 5
@@ -80,6 +80,11 @@ module.exports = (themeConfig, ctx) => {
 
   const config = {
     plugins,
+    define: {
+      THEME_BLOG_PAGINATION_COMPONENT: themeConfig.paginationComponent
+        ? themeConfig.paginationComponent
+        : 'Pagination'
+    }
   }
 
   /**

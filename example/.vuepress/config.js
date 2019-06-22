@@ -10,7 +10,6 @@ module.exports = {
     modifyBlogPluginOptions(blogPlugnOptions) {
       const archiveDirectoryClassifierIndex = blogPlugnOptions.directories.findIndex(d => d.id === 'archive')
       blogPlugnOptions.directories.splice(archiveDirectoryClassifierIndex, 1)
-      console.log(blogPlugnOptions)
       return blogPlugnOptions
     },
     /**
@@ -51,5 +50,7 @@ module.exports = {
         },
       ],
     },
+
+    // paginationComponent: 'SimplePagination'
   },
 }

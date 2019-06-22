@@ -20,23 +20,50 @@
       </div>
     </div>
   
-    <Pagination :pagination="pagination"/>
+    <component v-if="paginationComponent" :is="paginationComponent"></component>
   </div>
 </template>
 
 <script>
+  /* global THEME_BLOG_PAGINATION_COMPONENT */
+  
   import Toc from '@theme/components/Toc.vue'
-  import Pagination from '@theme/components/Pagination.vue'
   import { NavigationIcon, ClockIcon } from 'vue-feather-icons'
+  import { Pagination, SimplePagination } from '@vuepress/plugin-blog/lib/client/components'
+  
+  console.log(SimplePagination)
   
   export default {
     components: { Toc, Pagination, NavigationIcon, ClockIcon },
     props: ['pagination'],
+    data() {
+      return {
+        paginationComponent: null
+      }
+    },
+    
+    created() {
+      this.paginationComponent = this.getPaginationComponent()
+    },
+    
     computed: {
       pages() {
         return this.pagination.pages
-      }
+      },
     },
+    
+    methods: {
+      getPaginationComponent() {
+        const n = THEME_BLOG_PAGINATION_COMPONENT
+        if (n === 'Pagination') {
+          return Pagination
+        }
+        if (n === 'SimplePagination') {
+          return SimplePagination
+        }
+        return Vue.component(n) || Pagination
+      }
+    }
   }
 </script>
 
