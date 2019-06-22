@@ -227,6 +227,26 @@ plugin is as follows:
 }
 ```
 
+### paginationComponent
+
+- Type: `string`
+- Default: `Pagination`
+
+Custom the pagination component.
+
+The default is the 
+[pagination component](https://vuepress-plugin-blog.ulivz.com/components/#pagination) powerful by 
+[@vuepress/plugin-blog](https://github.com/ulivz/vuepress-plugin-blog):
+
+<img src="./assets/pagination.png" width="250" height="" style=""/>
+
+You can set this option to `SimplePagination` to enable another out-of-box 
+[simple pagination component](https://vuepress-plugin-blog.ulivz.com/components/#simplepagination):
+
+<img src="./assets/simple-pagination.png" width="250" height="" style=""/>
+
+You can also wirte a custom pagination component and register it as a global component. then pass its
+name to this option.
 
 ## Front Matter
 
