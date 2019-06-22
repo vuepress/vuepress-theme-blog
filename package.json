@@ -17,7 +17,8 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "example:dev": "vuepress dev example --temp example/.temp",
-    "example:build": "vuepress build example --temp example/.temp"
+    "example:build": "vuepress build example --temp example/.temp",
+    "prepublishOnly": "npm run example:build && conventional-changelog -p angular -r 2 -i CHANGELOG.md -s"
   },
   "repository": {
     "url": "ulivz/vuepress-theme-blog",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "eslint-config-sherry": "0.0.1",
+    "conventional-changelog-cli": "^2.0.1",
     "vuepress": "^1.0.0"
   },
   "publishConfig": {
