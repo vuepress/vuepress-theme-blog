@@ -1,3 +1,13 @@
+## [1.2.2](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.1...v1.2.2) (2019-06-23)
+
+
+### Bug Fixes
+
+* require `modifyBlogPluginOptions` to delete the `archive` classifier ([5a34e26](https://github.com/ulivz/vuepress-theme-blog/commit/5a34e26))
+* Vue is undefined ([42118a3](https://github.com/ulivz/vuepress-theme-blog/commit/42118a3))
+
+
+
 ## [1.2.1](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.0...v1.2.1) (2019-06-23)
 
 
