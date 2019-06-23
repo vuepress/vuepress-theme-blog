@@ -4,15 +4,6 @@ module.exports = {
   theme: require.resolve('../../'),
   themeConfig: {
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/#modifyblogpluginoptions
-     * Workaround of https://github.com/ulivz/vuepress-plugin-blog/issues/1
-     */
-    modifyBlogPluginOptions(blogPlugnOptions) {
-      const archiveDirectoryClassifierIndex = blogPlugnOptions.directories.findIndex(d => d.id === 'archive')
-      blogPlugnOptions.directories.splice(archiveDirectoryClassifierIndex, 1)
-      return blogPlugnOptions
-    },
-    /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#nav
      */
     nav: [

@@ -24,17 +24,6 @@ module.exports = (themeConfig, ctx) => {
           lengthPerPage: 5,
         },
       },
-      {
-        id: 'archive',
-        dirname: '_archive',
-        path: '/archive/',
-        // layout: 'IndexArchive', defaults to `Layout.vue`
-        itemLayout: 'Post',
-        itemPermalink: '/archive/:year/:month/:day/:slug',
-        pagination: {
-          lengthPerPage: 5,
-        },
-      },
     ],
     frontmatters: [
       {
@@ -54,7 +43,7 @@ module.exports = (themeConfig, ctx) => {
 
   const blogPluginOptions = typeof modifyBlogPluginOptions === 'function'
     ? modifyBlogPluginOptions(defaultBlogPluginOptions)
-    : themeConfig
+    : defaultBlogPluginOptions
 
   const plugins = [
     '@vuepress/plugin-nprogress',
