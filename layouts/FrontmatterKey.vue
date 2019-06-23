@@ -1,5 +1,5 @@
 <template>
   <div id="vuperess-theme-blog__tags-layout">
-    <BlogTags :tags="$tag.list"/>
+    <BlogTags :tags="$frontmatterKey.list"/>
   </div>
 </template>

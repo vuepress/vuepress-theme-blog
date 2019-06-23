@@ -24,6 +24,10 @@ module.exports = {
         text: 'Tags',
         link: '/tag/',
       },
+      {
+        text: 'About',
+        link: '/about/',
+      },
     ],
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#footer

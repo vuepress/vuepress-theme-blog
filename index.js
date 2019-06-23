@@ -17,7 +17,7 @@ module.exports = (themeConfig, ctx) => {
         id: 'post',
         dirname: '_posts',
         path: '/',
-        layout: 'IndexPost',
+        // layout: 'IndexPost', defaults to `Layout.vue`
         itemLayout: 'Post',
         itemPermalink: '/:year/:month/:day/:slug',
         pagination: {
@@ -28,7 +28,7 @@ module.exports = (themeConfig, ctx) => {
         id: 'archive',
         dirname: '_archive',
         path: '/archive/',
-        layout: 'IndexArchive',
+        // layout: 'IndexArchive', defaults to `Layout.vue`
         itemLayout: 'Post',
         itemPermalink: '/archive/:year/:month/:day/:slug',
         pagination: {
@@ -41,11 +41,10 @@ module.exports = (themeConfig, ctx) => {
         id: "tag",
         keys: ['tag', 'tags'],
         path: '/tag/',
-        layout: 'Tag',
+        // layout: 'Tag',  defaults to `FrontmatterKey.vue`
         frontmatter: { title: 'Tag' },
-        itemlayout: 'Tag',
         pagination: {
-          perPagePosts: 5
+          lengthPerPage: 5
         }
       },
     ]

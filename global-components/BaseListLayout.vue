@@ -20,7 +20,7 @@
       </div>
     </div>
   
-    <component v-if="paginationComponent" :is="paginationComponent"></component>
+    <component v-if="$pagination.length > 1 && paginationComponent" :is="paginationComponent"></component>
   </div>
 </template>
 
@@ -30,12 +30,10 @@
   import Toc from '@theme/components/Toc.vue'
   import { NavigationIcon, ClockIcon } from 'vue-feather-icons'
   import { Pagination, SimplePagination } from '@vuepress/plugin-blog/lib/client/components'
-  
-  console.log(SimplePagination)
-  
+
   export default {
     components: { Toc, Pagination, NavigationIcon, ClockIcon },
-    props: ['pagination'],
+    // props: ['pagination'],
     data() {
       return {
         paginationComponent: null
@@ -48,7 +46,8 @@
     
     computed: {
       pages() {
-        return this.pagination.pages
+        console.log(this.$pagination)
+        return this.$pagination.pages
       },
     },
     
