@@ -26,6 +26,8 @@
     GithubIcon,
     FacebookIcon,
     TwitterIcon,
+    InstagramIcon,
+    LinkedinIcon
   } from 'vue-feather-icons'
   
   export default {
@@ -33,6 +35,8 @@
       GithubIcon,
       FacebookIcon,
       TwitterIcon,
+      InstagramIcon,
+      LinkedinIcon
     },
     
     methods: {
@@ -44,6 +48,10 @@
             return 'FacebookIcon'
           case 'twitter':
             return 'TwitterIcon'
+          case 'instagram':
+            return 'InstagramIcon'
+          case 'linkedin':
+            return 'LinkedinIcon'
           default:
             return ''
         }
