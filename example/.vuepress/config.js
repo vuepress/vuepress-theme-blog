@@ -30,6 +30,14 @@ module.exports = {
           link: 'https://github.com/ulivz',
         },
         {
+          type: 'instagram',
+          link: '#',
+        },
+        {
+          type: 'linkedin',
+          link: '#',
+        },
+        {
           type: 'twitter',
           link: 'https://twitter.com/_ulivz',
         },
