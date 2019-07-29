@@ -137,13 +137,11 @@
 
   .vuepress-toc
     position: fixed;
-    padding-top 100px
     display: none;
-    width: $tocWidth;
     max-height: 100vh;
     max-width 220px
     overflow-y: auto;
-    padding: $sidebarTop + $navbarHeight 0;
+    padding-top: $navbarHeight;
     top: 0;
     right: 10px;
     box-sizing: border-box;
