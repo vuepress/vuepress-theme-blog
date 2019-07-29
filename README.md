@@ -22,8 +22,9 @@ This theme is still working in progress, here are some things we're going to do,
  
 ## Sites
 
-- [Documentation](https://vuepress-theme-blog.ulivz.com)
-- [Live Example](https://ulivz.com) (ULIVZ's space.)
+- [Documentation](https://vuepress-theme-blog.ulivz.com) - clone this repo and run `yarn && yarn docs:dev`
+- [Live Example](https://example.vuepress-theme-blog.ulivz.com/) - clone this repo and run `yarn && yarn example:dev`
+- [Live Example - ULIVZ's space](https://ulivz.com/)
 
 
 
