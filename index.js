@@ -2,12 +2,11 @@ const removeMd = require('remove-markdown')
 
 module.exports = (themeConfig, ctx) => {
   themeConfig = Object.assign(
-    {},
     themeConfig,
     {
-      summary: true,
-      summaryLength: 200,
-      pwa: false,
+      summary: !!themeConfig.summary,
+      summaryLength: typeof themeConfig.summaryLength === 'number' ? themeConfig.summaryLength : 200,
+      pwa: !!themeConfig.pwa,
     }
   )
 
