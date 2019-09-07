@@ -92,7 +92,6 @@
 
 
         .nav-item
-          flex 1
           margin-left 20px
 
           a
