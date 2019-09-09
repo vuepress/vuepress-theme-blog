@@ -1,3 +1,29 @@
+## [1.2.4](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.3...v1.2.4) (2019-09-09)
+
+
+### Bug Fixes
+
+* base url in header ([#9](https://github.com/ulivz/vuepress-theme-blog/issues/9)) ([0d70cd4](https://github.com/ulivz/vuepress-theme-blog/commit/0d70cd4))
+* config for summary, summaryLength and pwa (close: [#13](https://github.com/ulivz/vuepress-theme-blog/issues/13))([#14](https://github.com/ulivz/vuepress-theme-blog/issues/14)) ([7d40fe3](https://github.com/ulivz/vuepress-theme-blog/commit/7d40fe3))
+* prevent nav from breaking into next line ([#17](https://github.com/ulivz/vuepress-theme-blog/issues/17)) ([377c706](https://github.com/ulivz/vuepress-theme-blog/commit/377c706))
+
+
+
+## [1.2.3](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.2...v1.2.3) (2019-07-29)
+
+
+### Bug Fixes
+
+* <Toc /> component can not display normally (close: [#7](https://github.com/ulivz/vuepress-theme-blog/issues/7))([#11](https://github.com/ulivz/vuepress-theme-blog/issues/11)) ([7d1cc3d](https://github.com/ulivz/vuepress-theme-blog/commit/7d1cc3d))
+
+
+
+### Features
+
+* add contact type 'instagram' and 'linkedin' ([#10](https://github.com/ulivz/vuepress-theme-blog/issues/10)) ([ca0590c](https://github.com/ulivz/vuepress-theme-blog/commit/ca0590c))
+
+
+
 ## [1.2.2](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.1...v1.2.2) (2019-06-23)
 
 
