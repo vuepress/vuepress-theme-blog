@@ -1,6 +1,6 @@
 {
   "name": "@vuepress/theme-blog",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Default blog theme for VuePress",
   "main": "index.js",
   "files": [
@@ -32,12 +32,12 @@
     "@vuepress/plugin-nprogress": "1.0.0",
     "@vuepress/plugin-pwa": "1.0.0",
     "@vuepress/plugin-search": "1.0.0",
-    "vue-feather-icons": "^4.21.0",
-    "remove-markdown": "^0.3.0"
+    "remove-markdown": "^0.3.0",
+    "vue-feather-icons": "^4.21.0"
   },
   "devDependencies": {
-    "eslint-config-sherry": "0.0.1",
     "conventional-changelog-cli": "^2.0.1",
+    "eslint-config-sherry": "0.0.1",
     "vuepress": "^1.0.0"
   },
   "publishConfig": {
