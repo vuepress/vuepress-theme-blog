@@ -3,7 +3,7 @@
     <div class="mobile-header-bar">
       <div class="mobile-header-title">
         <NavLink
-          :link="$site.base"
+          link="/"
           class="mobile-home-link"
         >{{ $site.title }}
         </NavLink>
