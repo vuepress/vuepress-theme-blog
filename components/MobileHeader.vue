@@ -39,6 +39,12 @@
       return {
         isOpen: false
       }
+    },
+
+    mounted() {
+      this.$router.afterEach(()=>{
+        this.isOpen = false
+      })
     }
 }
 </script>
