@@ -19,16 +19,14 @@
         </div>
       </div>
     </header>
-    <MobileHeader />
   </section>
 </template>
 
 <script>
-  import MobileHeader from './MobileHeader.vue'
   import SearchBox from '@SearchBox'
 
   export default {
-    components: { MobileHeader, SearchBox },
+    components: { SearchBox },
   }
 </script>
 

@@ -1,6 +1,7 @@
 <template>
   <div id="vuperess-theme-blog__global-layout">
     <Header/>
+    <MobileHeader/>
     <div class="content-wrapper">
       <DefaultGlobalLayout/>
     </div>
