@@ -1,3 +1,19 @@
+## [1.2.5](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.4...v1.2.5) (2019-09-10)
+
+
+### Bug Fixes
+
+* remove excess space in mobile side ([c4cc56e](https://github.com/ulivz/vuepress-theme-blog/commit/c4cc56e))
+
+
+### Features
+
+* bump blog plugin to v1.2.5 ([96b16b9](https://github.com/ulivz/vuepress-theme-blog/commit/96b16b9))
+* close mobile menu after clicking on content ([78453bc](https://github.com/ulivz/vuepress-theme-blog/commit/78453bc))
+* close mobile menu after navigation ([266b0d5](https://github.com/ulivz/vuepress-theme-blog/commit/266b0d5))
+
+
+
 ## [1.2.4](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.3...v1.2.4) (2019-09-09)
 
 
