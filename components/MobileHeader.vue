@@ -7,8 +7,7 @@
           class="mobile-home-link"
         >{{ $site.title }}
         </NavLink>
-        <XIcon v-if="isOpen" @click="isOpen = !isOpen" />
-        <MenuIcon v-else @click="isOpen = !isOpen" />
+        <component :is="isOpen ? 'XIcon' : 'MenuIcon'" @click="$emit('toggle-sidebar')"/>
       </div>
       <div class="mobile-menu-wrapper" v-bind:class="{ open: isOpen }">
         <hr class="menu-divider"/>
@@ -29,23 +28,17 @@
   } from 'vue-feather-icons'
 
   export default {
+    props:{
+      isOpen:{
+        type: Boolean,
+        required: true
+      }
+    },
 
     components: {
       MenuIcon,
       XIcon
     },
-
-    data() {
-      return {
-        isOpen: false
-      }
-    },
-
-    mounted() {
-      this.$router.afterEach(()=>{
-        this.isOpen = false
-      })
-    }
 }
 </script>
 

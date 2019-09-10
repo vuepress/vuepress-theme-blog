@@ -1,8 +1,8 @@
 <template>
   <div id="vuperess-theme-blog__global-layout">
     <Header/>
-    <MobileHeader/>
-    <div class="content-wrapper">
+    <MobileHeader :isOpen="isMobileHeaderOpen" @toggle-sidebar="isMobileHeaderOpen = !isMobileHeaderOpen"/>
+    <div class="content-wrapper" @click="isMobileHeaderOpen = false">
       <DefaultGlobalLayout/>
     </div>
     <Footer/>
@@ -22,6 +22,18 @@
       MobileHeader,
       Footer
     },
+
+    data() {
+      return {
+        isMobileHeaderOpen: false
+      }
+    },
+
+    mounted() {
+      this.$router.afterEach(()=>{
+        this.isMobileHeaderOpen = false
+      })
+    }
   }
 </script>
 
