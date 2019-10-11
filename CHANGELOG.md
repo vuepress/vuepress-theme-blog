@@ -1,3 +1,12 @@
+## [1.2.6](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.5...v1.2.6) (2019-10-11)
+
+
+### Bug Fixes
+
+* solve invalid date on Safari ([b29c1b6](https://github.com/ulivz/vuepress-theme-blog/commit/b29c1b62a89b1a79ac2e1bfafb677496a5c7ea66))
+* summary default should be true ([46e503c](https://github.com/ulivz/vuepress-theme-blog/commit/46e503cd7d200e7982bc6d4e98c20feb69759cb2))
+
+
 ## [1.2.5](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.4...v1.2.5) (2019-09-10)
 
 
