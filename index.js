@@ -4,7 +4,7 @@ module.exports = (themeConfig, ctx) => {
   themeConfig = Object.assign(
     themeConfig,
     {
-      summary: !!themeConfig.summary,
+      summary: themeConfig.summary === undefined ? true : themeConfig.summary,
       summaryLength: typeof themeConfig.summaryLength === 'number' ? themeConfig.summaryLength : 200,
       pwa: !!themeConfig.pwa,
     }
