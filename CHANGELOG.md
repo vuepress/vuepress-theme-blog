@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.6...v1.3.0) (2019-10-15)
+
+
+### Features
+
+* support sitemap and commenting ([9690689](https://github.com/ulivz/vuepress-theme-blog/commit/9690689595e4e635492ad96c393781b661d3a7fb))
+
+
+
 ## [1.2.6](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.5...v1.2.6) (2019-10-11)
 
 
