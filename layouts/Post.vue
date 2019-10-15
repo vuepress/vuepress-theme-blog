@@ -1,16 +1,22 @@
 <template>
   <div id="vuperess-theme-blog__post-layout">
-    <Content class="vuepress-blog-theme-content"/>
+    <div class="vuepress-blog-theme-content">
+      <Content/>
+      <hr/>
+      <Comment/>
+    </div>
     <Toc/>
   </div>
 </template>
 
 <script>
   import Toc from '@theme/components/Toc.vue'
+  import { Comment } from '@vuepress/plugin-blog/lib/client/components'
   
   export default {
     components: {
       Toc,
+      Comment,
     },
   }
 </script>
