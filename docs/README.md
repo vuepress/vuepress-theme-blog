@@ -121,7 +121,42 @@ module.exports = {
 
 ### modifyBlogPluginOptions
 
-A function used to modify the default blog plugin options of [@vuepress/plugin-blog](https://vuepress-plugin-blog.ulivz.com/). It's common to use it to add apply custom [document classifiers](https://vuepress-plugin-blog.ulivz.com/#document-classifier). e.g.
+A function used to modify the default blog plugin options of [@vuepress/plugin-blog](https://vuepress-plugin-blog.ulivz.com/).
+
+Here is the default blog plugin options:
+
+```js
+{
+  directories: [
+    {
+      id: 'post',
+      dirname: '_posts',
+      path: '/',
+      // layout: 'IndexPost', defaults to `Layout.vue`
+      itemLayout: 'Post',
+      itemPermalink: '/:year/:month/:day/:slug',
+      pagination: {
+        lengthPerPage: 5,
+      },
+    },
+  ],
+  frontmatters: [
+    {
+      id: "tag",
+      keys: ['tag', 'tags'],
+      path: '/tag/',
+      // layout: 'Tag',  defaults to `FrontmatterKey.vue`
+      frontmatter: { title: 'Tag' },
+      pagination: {
+        lengthPerPage: 5
+      }
+    },
+  ]
+}
+```
+
+
+Adding apply custom [document classifiers](https://vuepress-plugin-blog.ulivz.com/guide/getting-started.html#document-classifier):
 
 ```js
 module.exports = {
@@ -146,53 +181,32 @@ module.exports = {
 }
 ```
 
-Here is the default blog plugin options:
-
+Enabling commenting and sitemap:
 ```js
-{
-  directories: [
-    {
-      id: 'post',
-      dirname: '_posts',
-      path: '/',
-      layout: 'IndexPost',
-      itemLayout: 'Post',
-      itemPermalink: '/:year/:month/:day/:slug',
-      pagination: {
-        perPagePosts: 5,
-      },
-    },
-    {
-      id: 'archive',
-      dirname: '_archive',
-      path: '/archive/',
-      layout: 'IndexArchive',
-      itemLayout: 'Post',
-      itemPermalink: '/archive/:year/:month/:day/:slug',
-      pagination: {
-        perPagePosts: 5,
-      },
-    },
-  ],
-  frontmatters: [
-    {
-      id: "tag",
-      keys: ['tag', 'tags'],
-      path: '/tag/',
-      layout: 'Tags',
-      frontmatter: { title: 'Tags' },
-      itemlayout: 'Tag',
-      pagination: {
-        perPagePosts: 5
+module.exports = {
+  themeConfig: {
+    modifyBlogPluginOptions(blogPlugnOptions) {
+      const sitemap = {
+        hostname: 'https://yourdomain'
       }
+
+      const comment = {
+        service: 'disqus',
+        shortname: 'disqus-shortname',
+        // service: 'vssue',
+        // owner: 'You',
+        // repo: 'Your repo',
+        // clientId: 'Your clientId',
+        // clientSecret: 'Your clientSecret',
+      }
+
+      return { ...blogPluginOptions, sitemap, comment }
     },
-  ]
+  },
 }
 ```
 
-**Also see:**
-
-- [Document Classifier](https://vuepress-plugin-blog.ulivz.com/#document-classifier)
+Since many features are powered by the plugin, we suggest you to read the [documentation](https://vuepress-plugin-blog.ulivz.com/).
 
 
 ### summary

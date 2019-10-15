@@ -54,6 +54,24 @@ module.exports = {
       ],
     },
 
+    modifyBlogPluginOptions (blogPluginOptions) {
+      const sitemap = {
+        hostname: 'https://yourdomain'
+      }
+
+      const comment = {
+        service: 'disqus',
+        shortname: 'vuepress-plugin-blog',
+        // service: 'vssue',
+        // owner: 'You',
+        // repo: 'Your repo',
+        // clientId: 'Your clientId',
+        // clientSecret: 'Your clientSecret',
+      }
+
+      return { ...blogPluginOptions, sitemap, comment }
+    }
+
     // paginationComponent: 'SimplePagination'
   },
 }
