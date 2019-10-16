@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.0...v1.3.1) (2019-10-16)
+
+
+### Bug Fixes
+
+* fix broken content layout ([553dcf4](https://github.com/ulivz/vuepress-theme-blog/commit/553dcf48622e6ea87e97f2ad38144634183067c2))
+
+
+
 # [1.3.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.2.6...v1.3.0) (2019-10-15)
 
 
