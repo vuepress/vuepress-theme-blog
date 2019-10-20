@@ -1,3 +1,12 @@
+## [1.3.2](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.1...v1.3.2) (2019-10-20)
+
+
+### Features
+
+* support passing comment props via frontmatter ([815faf4](https://github.com/ulivz/vuepress-theme-blog/commit/815faf477cd21ada70da5c7e7aedaabe56d06879))
+
+
+
 ## [1.3.1](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.0...v1.3.1) (2019-10-16)
 
 
