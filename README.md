@@ -1,6 +1,7 @@
 # @vuepress/theme-blog
 
-[![NPM version](https://badgen.net/npm/v/@vuepress/theme-blog)](https://npmjs.com/package/@vuepress/theme-blog) [![NPM downloads](https://badgen.net/npm/dm/@vuepress/theme-blog)](https://npmjs.com/package/@vuepress/theme-blog) [![CircleCI](https://badgen.net/circleci/github/ulivz/@vuepress/theme-blog/master)](https://circleci.com/gh/ulivz/@vuepress/theme-blog/tree/master)
+[![NPM version](https://badgen.net/npm/v/@vuepress/theme-blog)](https://npmjs.com/package/@vuepress/theme-blog) [![NPM downloads](https://badgen.net/npm/dm/@vuepress/theme-blog)](https://npmjs.com/package/@vuepress/theme-blog)
+[![NPM LICENSE](https://badgen.net/npm/license/@vuepress/theme-blog)](https://github.com/vuepressjs/vuepress-theme-blog/blob/master/LICENSE)
 
 ## Status: WIP
 
