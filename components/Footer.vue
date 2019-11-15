@@ -23,35 +23,35 @@
 
 <script>
   import {
-    GithubIcon,
     FacebookIcon,
-    TwitterIcon,
+    GithubIcon,
     InstagramIcon,
-    LinkedinIcon
+    LinkedinIcon,
+    TwitterIcon
   } from 'vue-feather-icons'
 
   export default {
     components: {
-      GithubIcon,
       FacebookIcon,
-      TwitterIcon,
+      GithubIcon,
       InstagramIcon,
-      LinkedinIcon
+      LinkedinIcon,
+      TwitterIcon
     },
 
     methods: {
       getIconComponentName(contactType) {
         switch (contactType) {
-          case 'github':
-            return 'GithubIcon'
           case 'facebook':
             return 'FacebookIcon'
-          case 'twitter':
-            return 'TwitterIcon'
+          case 'github':
+            return 'GithubIcon'
           case 'instagram':
             return 'InstagramIcon'
           case 'linkedin':
             return 'LinkedinIcon'
+          case 'twitter':
+            return 'TwitterIcon'
           default:
             return ''
         }
