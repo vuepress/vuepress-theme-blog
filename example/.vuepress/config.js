@@ -26,6 +26,10 @@ module.exports = {
     footer: {
       contact: [
         {
+          type: 'facebook',
+          link: '#',
+        },
+        {
           type: 'github',
           link: 'https://github.com/ulivz',
         },
