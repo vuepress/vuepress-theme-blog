@@ -34,6 +34,10 @@ module.exports = {
           link: 'https://github.com/ulivz',
         },
         {
+          type: 'gitlab',
+          link: '#',
+        },
+        {
           type: 'instagram',
           link: '#',
         },
@@ -42,9 +46,25 @@ module.exports = {
           link: '#',
         },
         {
+          type: 'mail',
+          link: '#',
+        },
+        {
+          type: 'messenger',
+          link: '#',
+        },
+        {
+          type: 'phone',
+          link: '#',
+        },
+        {
           type: 'twitter',
           link: 'https://twitter.com/_ulivz',
         },
+        {
+          type: 'web',
+          link: '#',
+        }
       ],
       copyright: [
         {

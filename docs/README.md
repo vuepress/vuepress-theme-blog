@@ -88,9 +88,14 @@ For now `ContactType` supports following enums:
 
 - facebook
 - github
+- gitlab
 - instagram
 - linkedin
+- mail
+- messenger
+- phone
 - twitter
+- web
 
 ::: tip
 Welcome contribution of adding more built-in contact type.

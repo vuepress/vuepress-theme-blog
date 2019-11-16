@@ -25,8 +25,13 @@
   import {
     FacebookIcon,
     GithubIcon,
+    GitlabIcon,
+    GlobeIcon,
     InstagramIcon,
     LinkedinIcon,
+    MailIcon,
+    MessageSquareIcon,
+    PhoneIcon,
     TwitterIcon
   } from 'vue-feather-icons'
 
@@ -34,8 +39,13 @@
     components: {
       FacebookIcon,
       GithubIcon,
+      GitlabIcon,
+      GlobeIcon,
       InstagramIcon,
       LinkedinIcon,
+      MailIcon,
+      MessageSquareIcon,
+      PhoneIcon,
       TwitterIcon
     },
 
@@ -46,12 +56,22 @@
             return 'FacebookIcon'
           case 'github':
             return 'GithubIcon'
+          case 'gitlab':
+            return 'GitlabIcon'
           case 'instagram':
             return 'InstagramIcon'
           case 'linkedin':
             return 'LinkedinIcon'
+          case 'mail':
+            return 'MailIcon'
+          case 'messenger':
+            return 'MessageSquareIcon'
+          case 'phone':
+            return 'PhoneIcon'
           case 'twitter':
             return 'TwitterIcon'
+          case 'web':
+            return 'GlobeIcon'
           default:
             return ''
         }
