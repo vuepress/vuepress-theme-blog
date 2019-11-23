@@ -26,8 +26,16 @@ module.exports = {
     footer: {
       contact: [
         {
+          type: 'facebook',
+          link: '#',
+        },
+        {
           type: 'github',
           link: 'https://github.com/ulivz',
+        },
+        {
+          type: 'gitlab',
+          link: '#',
         },
         {
           type: 'instagram',
@@ -38,9 +46,25 @@ module.exports = {
           link: '#',
         },
         {
+          type: 'mail',
+          link: '#',
+        },
+        {
+          type: 'messenger',
+          link: '#',
+        },
+        {
+          type: 'phone',
+          link: '#',
+        },
+        {
           type: 'twitter',
           link: 'https://twitter.com/_ulivz',
         },
+        {
+          type: 'web',
+          link: '#',
+        }
       ],
       copyright: [
         {

@@ -86,11 +86,16 @@ module.exports = {
 
 For now `ContactType` supports following enums:
 
-- github
 - facebook
-- twitter
+- github
+- gitlab
 - instagram
 - linkedin
+- mail
+- messenger
+- phone
+- twitter
+- web
 
 ::: tip
 Welcome contribution of adding more built-in contact type.
