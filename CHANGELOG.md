@@ -1,3 +1,12 @@
+## [1.3.3](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.2...v1.3.3) (2019-11-23)
+
+
+### Features
+
+* add several contact types ([8f5d015](https://github.com/ulivz/vuepress-theme-blog/commit/8f5d015cefc4e91049a33414b7577e7eb9544a3c))
+
+
+
 ## [1.3.2](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.1...v1.3.2) (2019-10-20)
 
 
