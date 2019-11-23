@@ -166,7 +166,7 @@ Adding apply custom [document classifiers](https://vuepress-plugin-blog.ulivz.co
 ```js
 module.exports = {
   themeConfig: {
-    modifyBlogPluginOptions(blogPlugnOptions) {
+    modifyBlogPluginOptions(blogPluginOptions) {
       const writingDirectoryClassifier = {
         id: 'writing',
         dirname: '_writings',
@@ -179,8 +179,8 @@ module.exports = {
         },
       }
       
-      blogPlugnOptions.directories.push(writingDirectoryClassifier)
-      return blogPlugnOptions
+      blogPluginOptions.directories.push(writingDirectoryClassifier)
+      return blogPluginOptions
     },
   },
 }
@@ -190,7 +190,7 @@ Enabling commenting and sitemap:
 ```js
 module.exports = {
   themeConfig: {
-    modifyBlogPluginOptions(blogPlugnOptions) {
+    modifyBlogPluginOptions(blogPluginOptions) {
       const sitemap = {
         hostname: 'https://yourdomain'
       }
