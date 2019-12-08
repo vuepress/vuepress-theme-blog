@@ -68,6 +68,7 @@
       },
 
       resolvePostDate(date) {
+				date = date.replace('T00:00:00.000Z', '')
         return new Date(date.replace(/\-/g, "/").trim()).toDateString()
       }
     }
