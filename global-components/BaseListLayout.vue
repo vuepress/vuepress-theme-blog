@@ -18,7 +18,7 @@
 
         <div class="ui-post-date" v-if="page.frontmatter.date">
           <ClockIcon/>
-          <span>{{ resovlePostDate(page.frontmatter.date) }}</span>
+          <span>{{ resolvePostDate(page.frontmatter.date) }}</span>
         </div>
       </div>
     </div>
@@ -67,8 +67,8 @@
         return Vue.component(n) || Pagination
       },
 
-      resovlePostDate(date) {
-        return new Date(date.replace(/\-/g, "/").trim()).toDateString()
+      resolvePostDate(date) {
+        return new Date(date).toDateString()
       }
     }
   }
