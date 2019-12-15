@@ -4,6 +4,10 @@ module.exports = {
   theme: require.resolve('../../'),
   themeConfig: {
     /**
+     * Ref: https://vuepress-theme-blog.ulivz.com/#dateFormat
+     */
+    dateFormat: 'YYYY-MM-DD',
+    /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#nav
      */
     nav: [

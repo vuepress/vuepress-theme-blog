@@ -27,6 +27,23 @@ module.exports = {
 
 ## Options
 
+### dateFormat
+
+- Type: `string'
+- Default: 'ddd MMM DD YYYY'
+
+You can find all available formats [here](https://github.com/iamkun/dayjs/blob/dev/docs/en/API-reference.md#displaying)
+
+e.g.
+
+```js
+module.exports = {
+  themeConfig: {
+    dateFormat: 'YYYY-MM-DD'
+  }
+}
+```
+
 ### nav
 
 - Type: `Array<{ text: string, link: string }>`
