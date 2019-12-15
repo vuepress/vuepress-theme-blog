@@ -86,6 +86,7 @@ module.exports = {
 
 For now `ContactType` supports following enums:
 
+- codepen
 - facebook
 - github
 - gitlab

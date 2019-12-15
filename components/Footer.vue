@@ -37,6 +37,7 @@ import {
   MessageSquareIcon,
   PhoneIcon,
   TwitterIcon,
+  CodepenIcon,
 } from 'vue-feather-icons'
 
 export default {
@@ -51,6 +52,7 @@ export default {
     MessageSquareIcon,
     PhoneIcon,
     TwitterIcon,
+    CodepenIcon,
   },
 
   computed: {
@@ -98,6 +100,8 @@ export default {
           return 'TwitterIcon'
         case 'web':
           return 'GlobeIcon'
+        case 'codepen':
+          return 'CodepenIcon'
         default:
           return ''
       }

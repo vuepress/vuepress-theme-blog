@@ -26,6 +26,10 @@ module.exports = {
     footer: {
       contact: [
         {
+          type: 'codepen',
+          link: '#',
+        },
+        {
           type: 'facebook',
           link: '#',
         },
