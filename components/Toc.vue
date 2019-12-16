@@ -157,7 +157,7 @@
 
       a
         display: block;
-        color: #2c3e50;
+        color: var(--text--link);
         width: 100%;
         box-sizing: border-box;
         font-size: 12px;
@@ -169,14 +169,14 @@
         white-space: nowrap;
 
       &.active
-        border-left-color: $accentColor;
+        border-left-color: var(--text--link--lighten);
 
         a
-          color: $accentColor;
+          color: var(--text--link--lighten);
 
       &:hover
         a
-          color: $accentColor;
+          color: var(--text--link--lighten);
 
     for i in range(3, 6)
       .vuepress-toc-h{i} a

@@ -1,11 +1,16 @@
 <template>
   <div id="base-list-layout">
     <div class="ui-posts">
+      <div class="ui-functional">
+        <span class="ui-site-title">{{ $site.title }}</span>
+        <component v-if="themeToggle" :is="themeToggle"/>
+      </div>
+
       <div class="ui-post" v-for="page in pages">
         <div class="ui-post-title">
           <NavLink :link="page.path">{{ page.title }}</NavLink>
         </div>
-        
+
         <div class="ui-post-summary">
           {{ page.frontmatter.summary || page.summary }}
           <!-- <Content :page-key="page.key" slot-key="intro"/>-->
@@ -22,37 +27,45 @@
         </div>
       </div>
     </div>
-    
+
     <component v-if="$pagination.length > 1 && paginationComponent" :is="paginationComponent"></component>
   </div>
 </template>
 
 <script>
   /* global THEME_BLOG_PAGINATION_COMPONENT */
-  
+
   import Vue from 'vue'
-  import { NavigationIcon, ClockIcon } from 'vue-feather-icons'
-  import { Pagination, SimplePagination } from '@vuepress/plugin-blog/lib/client/components'
-  
+  import {NavigationIcon, ClockIcon} from 'vue-feather-icons'
+  import {Pagination, SimplePagination} from '@vuepress/plugin-blog/lib/client/components'
+
   export default {
-    components: { NavigationIcon, ClockIcon },
+    components: {NavigationIcon, ClockIcon},
 
     data() {
       return {
-        paginationComponent: null
+        paginationComponent: null,
+        themeToggle: null
       }
     },
-    
+
     created() {
       this.paginationComponent = this.getPaginationComponent()
     },
-    
+
+    beforeMount() {
+      import('@theme/components/ThemeToggle.vue')
+        .then(module => {
+          this.themeToggle = module.default
+        })
+    },
+
     computed: {
       pages() {
         return this.$pagination.pages
       },
     },
-    
+
     methods: {
       getPaginationComponent() {
         const n = THEME_BLOG_PAGINATION_COMPONENT
@@ -74,64 +87,78 @@
   }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
   .common-layout
     .content-wrapper
       padding-bottom 80px
-  
+
+  .ui-functional
+    display flex
+    flex-direction row
+    align-items center
+    justify-content space-between
+    width 100%
+    margin-bottom 2rem
+
+    .ui-site-title
+      color var(--title)
+      font-size 25px
+      font-weight 900
+
+
   .ui-post
     padding-bottom 25px
     margin-bottom 25px
     border-bottom 1px solid #f1f1f1
-    
+
     &:last-child
       border-bottom 0px
       margin-bottom 0px
-    
+
     p
       margin 0
-  
+
   .ui-post-title
     font-family PT Serif, Serif
     font-size 28px
     border-bottom 0
-    
+
     a
       cursor pointer
-      color #000
+      color var(--text)
       transition all .2s
       text-decoration none
-      
+
       &:hover
         text-decoration underline
-  
+
   .ui-post-summary
     font-size 14px
     margin-bottom 15px
-    color rgba(0, 0, 0, 0.54)
+    color var(--text--mask)
     font-weight 200
-  
+
   .ui-post-author
     display flex
     align-items center
     font-size 12px
     line-height 12px
-    color rgba(0, 0, 0, 0.84)
+    color var(--text--mask2)
     margin-bottom 3px
     font-weight 400
-    
+
     svg
       margin-right 5px
       width 14px
       height 14px
-  
+
   .ui-post-date
     display flex
     align-items center
     font-size 12px
-    color rgba(0, 0, 0, 0.54)
+    color var(--text--mask)
     font-weight 200
-    
+
     svg
       margin-right 5px
       width 14px

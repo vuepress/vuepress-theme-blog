@@ -1,6 +1,6 @@
 {$contentClass}
   code
-    color lighten($textColor, 20%)
+    color var(--text--link)
     padding 0.1rem 0.4rem
     margin 0.1rem
     font-size 0.85em
@@ -21,14 +21,14 @@
     border-radius 6px
     overflow auto
     code
-      color #fff
+      color var(--text--code)
       padding 0
       background-color transparent
       border-radius 0
 
 div[class*="language-"]
   position relative
-  background-color $codeBgColor
+  background-color var(--code--background)
   border-radius 6px
   .highlight-lines
     user-select none
@@ -95,7 +95,7 @@ div[class*="language-"]
       height 100%
       border-radius 6px 0 0 6px
       border-right 1px solid rgba(0, 0, 0, 66%)
-      background-color $codeBgColor
+      background-color var(--code--background)
 
 
 for lang in $codeLang

@@ -26,12 +26,11 @@
   import SearchBox from '@SearchBox'
 
   export default {
-    components: { SearchBox },
+    components: { SearchBox }
   }
 </script>
 
 <style lang="stylus">
-  @import '~@app/style/config'
   #header
     z-index 12
     position fixed
@@ -39,7 +38,7 @@
     width 100vw
     box-sizing border-box
     // background lighten(#3eaf7c, 90%)
-    background-color #FFF
+    background-color var(--background)
     padding 20px 32px 20px
     margin auto
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03), 0 6px 6px rgba(0, 0, 0, 0.05)
@@ -64,7 +63,7 @@
       /*flex 0 0 200px*/
       // color #3eaf7c
       // color lighten(#3eaf7c, 10%)
-      color #000
+      color var(--text)
       font-size 30px
       margin 0
       letter-spacing 2px
@@ -72,7 +71,7 @@
       text-transform uppercase
 
       a
-        color #000
+        color var(--text)
         font-weight bold
         font-family PT Serif, Serif
         text-decoration none
@@ -93,6 +92,7 @@
           margin-left 20px
 
           a
+            color var(--text)
             font-family PT Serif, Serif
             font-size 20px
             // color lighten(#3eaf7c, 30%)
@@ -102,8 +102,10 @@
       .search-box
         font-family PT Serif, Serif
         margin-left 20px
+        background-color transparent
 
         input
+          background-color transparent
           border-radius 5px
           transition all .5s
           border: 1px solid #cecece
@@ -118,7 +120,7 @@
           right 0
 
           a
-            color #000
+            color var(--text)
             text-decoration none
 
             &.focused

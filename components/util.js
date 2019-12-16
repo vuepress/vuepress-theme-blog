@@ -2,6 +2,18 @@ export const hashRE = /#.*$/
 export const extRE = /\.(md|html)$/
 export const endingSlashRE = /\/$/
 export const outboundRE = /^(https?:|mailto:|tel:)/
+export const darkThemeKey = 'ui-dark-theme'
+export const darkTheme = {
+  'background': '#282c35',
+  'code--background': '#373c49',
+  'text': '#fff',
+  'text--code': '#fff',
+  'text--mask': 'rgba(255, 255, 255, 0.84)',
+  'text--mask2': 'rgba(255, 255, 255, 0.54)',
+  'text--link': '#ffa7c4',
+  'text--link--lighten': '#d23669',
+  'title': '#8a278c'
+}
 
 export function normalize (path) {
   return decodeURI(path)
@@ -19,6 +31,15 @@ export function isMailto (path) {
 
 export function isTel (path) {
   return /^tel:/.test(path)
+}
+
+export function initTheme() {
+  const isDark = window.localStorage.getItem(darkThemeKey) === 'true' || false
+  const style = window.document.body.style
+  Object.keys(darkTheme).forEach(key => {
+    isDark && style.setProperty(`--${key}`, darkTheme[key])
+    !isDark && style.removeProperty(`--${key}`)
+  })
 }
 
 export function ensureExt (path) {
