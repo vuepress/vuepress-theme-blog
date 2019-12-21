@@ -96,6 +96,7 @@ For now `ContactType` supports following enums:
 - phone
 - twitter
 - web
+- codepen
 
 ::: tip
 Welcome contribution of adding more built-in contact type.
