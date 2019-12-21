@@ -13,12 +13,23 @@
   ],
   "scripts": {
     "test": "npm run lint && jest",
-    "lint": "disable",
+    "lint": "eslint . --ext .js,.vue",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "example:dev": "vuepress dev example --temp example/.temp",
     "example:build": "vuepress build example --temp example/.temp",
     "prepublishOnly": "npm run example:build && conventional-changelog -p angular -r 2 -i CHANGELOG.md -s"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "repository": {
     "url": "ulivz/vuepress-theme-blog",
@@ -37,7 +48,13 @@
   },
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-config-sherry": "0.0.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.0.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "vuepress": "^1.0.0"
   },
   "publishConfig": {
