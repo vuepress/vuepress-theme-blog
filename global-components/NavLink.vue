@@ -1,20 +1,26 @@
 <template>
   <router-link
+    v-if="!isExternal(normalizedlink)"
     class="nav-link"
     :to="normalizedlink"
-    v-if="!isExternal(normalizedlink)"
     :exact="exact"
   >
-    <slot/>
+    <slot />
   </router-link>
   <a
     v-else
     :href="normalizedlink"
     class="nav-link external"
-    :target="isMailto(normalizedlink) || isTel(normalizedlink) ? null : '_blank'"
-    :rel="isMailto(normalizedlink) || isTel(normalizedlink) ? null : 'noopener noreferrer'"
+    :target="
+      isMailto(normalizedlink) || isTel(normalizedlink) ? null : '_blank'
+    "
+    :rel="
+      isMailto(normalizedlink) || isTel(normalizedlink)
+        ? null
+        : 'noopener noreferrer'
+    "
   >
-    <slot/>
+    <slot />
   </a>
 </template>
 
@@ -24,28 +30,30 @@ import { isExternal, isMailto, isTel, ensureExt } from '../components/util'
 export default {
   props: {
     link: {
-      required: true
-    }
+      required: true,
+    },
   },
 
   computed: {
-    normalizedlink () {
+    normalizedlink() {
       return ensureExt(this.link)
     },
 
-    exact () {
+    exact() {
       if (this.$site.locales) {
-        return Object.keys(this.$site.locales).some(rootLink => rootLink === this.normalizedlink)
+        return Object.keys(this.$site.locales).some(
+          rootLink => rootLink === this.normalizedlink
+        )
       }
       return this.normalizedlink === '/'
-    }
+    },
   },
 
   methods: {
     isExternal,
     isMailto,
-    isTel
-  }
+    isTel,
+  },
 }
 </script>
 

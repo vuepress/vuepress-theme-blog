@@ -1,14 +1,14 @@
 const removeMd = require('remove-markdown')
 
 module.exports = (themeConfig, ctx) => {
-  themeConfig = Object.assign(
-    themeConfig,
-    {
-      summary: themeConfig.summary === undefined ? true : themeConfig.summary,
-      summaryLength: typeof themeConfig.summaryLength === 'number' ? themeConfig.summaryLength : 200,
-      pwa: !!themeConfig.pwa,
-    }
-  )
+  themeConfig = Object.assign(themeConfig, {
+    summary: themeConfig.summary === undefined ? true : themeConfig.summary,
+    summaryLength:
+      typeof themeConfig.summaryLength === 'number'
+        ? themeConfig.summaryLength
+        : 200,
+    pwa: !!themeConfig.pwa,
+  })
 
   const defaultBlogPluginOptions = {
     directories: [
@@ -26,43 +26,45 @@ module.exports = (themeConfig, ctx) => {
     ],
     frontmatters: [
       {
-        id: "tag",
+        id: 'tag',
         keys: ['tag', 'tags'],
         path: '/tag/',
         // layout: 'Tag',  defaults to `FrontmatterKey.vue`
         frontmatter: { title: 'Tag' },
         pagination: {
-          lengthPerPage: 5
-        }
+          lengthPerPage: 5,
+        },
       },
-    ]
+    ],
   }
 
   const { modifyBlogPluginOptions } = themeConfig
 
-  const blogPluginOptions = typeof modifyBlogPluginOptions === 'function'
-    ? modifyBlogPluginOptions(defaultBlogPluginOptions)
-    : defaultBlogPluginOptions
+  const blogPluginOptions =
+    typeof modifyBlogPluginOptions === 'function'
+      ? modifyBlogPluginOptions(defaultBlogPluginOptions)
+      : defaultBlogPluginOptions
 
   const plugins = [
     '@vuepress/plugin-nprogress',
     ['@vuepress/medium-zoom', true],
-    ['@vuepress/search', {
-      searchMaxSuggestions: 10
-    }],
     [
-      '@vuepress/blog',
-      blogPluginOptions,
+      '@vuepress/search',
+      {
+        searchMaxSuggestions: 10,
+      },
     ],
+    ['@vuepress/blog', blogPluginOptions],
   ]
 
   if (themeConfig.pwa) {
-    plugins.push(
-      ['@vuepress/pwa', {
+    plugins.push([
+      '@vuepress/pwa',
+      {
         serviceWorker: true,
-        updatePopup: true
-      }],
-    )
+        updatePopup: true,
+      },
+    ])
   }
 
   const config = {
@@ -70,25 +72,26 @@ module.exports = (themeConfig, ctx) => {
     define: {
       THEME_BLOG_PAGINATION_COMPONENT: themeConfig.paginationComponent
         ? themeConfig.paginationComponent
-        : 'Pagination'
-    }
+        : 'Pagination',
+    },
   }
 
   /**
    * Generate summary.
    */
   if (themeConfig.summary) {
-    config.extendPageData = function (pageCtx) {
+    config.extendPageData = function(pageCtx) {
       const strippedContent = pageCtx._strippedContent
       if (!strippedContent) {
         return
       }
-      pageCtx.summary = removeMd(
-        strippedContent
-          .trim()
-          .replace(/^#+\s+(.*)/, '')
-          .slice(0, themeConfig.summaryLength)
-      ) + ' ...'
+      pageCtx.summary =
+        removeMd(
+          strippedContent
+            .trim()
+            .replace(/^#+\s+(.*)/, '')
+            .slice(0, themeConfig.summaryLength)
+        ) + ' ...'
     }
   }
 

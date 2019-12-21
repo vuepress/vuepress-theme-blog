@@ -2,17 +2,20 @@
   <div id="mobile-header">
     <div class="mobile-header-bar">
       <div class="mobile-header-title">
-        <NavLink
-          link="/"
-          class="mobile-home-link"
-        >{{ $site.title }}
-        </NavLink>
-        <component :is="isOpen ? 'XIcon' : 'MenuIcon'" @click="$emit('toggle-sidebar')"/>
+        <NavLink link="/" class="mobile-home-link">{{ $site.title }} </NavLink>
+        <component
+          :is="isOpen ? 'XIcon' : 'MenuIcon'"
+          @click="$emit('toggle-sidebar')"
+        />
       </div>
-      <div class="mobile-menu-wrapper" v-bind:class="{ open: isOpen }">
-        <hr class="menu-divider"/>
-        <ul class="mobile-nav" v-if="$themeConfig.nav">
-          <li class="mobile-nav-item" v-for="item in $themeConfig.nav">
+      <div class="mobile-menu-wrapper" :class="{ open: isOpen }">
+        <hr class="menu-divider" />
+        <ul v-if="$themeConfig.nav" class="mobile-nav">
+          <li
+            v-for="item in $themeConfig.nav"
+            :key="item.text"
+            class="mobile-nav-item"
+          >
             <NavLink :link="item.link">{{ item.text }}</NavLink>
           </li>
         </ul>
@@ -22,75 +25,68 @@
 </template>
 
 <script>
-  import {
+import { MenuIcon, XIcon } from 'vue-feather-icons'
+
+export default {
+  components: {
     MenuIcon,
-    XIcon
-  } from 'vue-feather-icons'
-
-  export default {
-    props:{
-      isOpen:{
-        type: Boolean,
-        required: true
-      }
+    XIcon,
+  },
+  props: {
+    isOpen: {
+      type: Boolean,
+      required: true,
     },
-
-    components: {
-      MenuIcon,
-      XIcon
-    },
+  },
 }
 </script>
 
 <style lang="stylus">
+.mobile-header-bar
+  z-index 12
+  position fixed
+  top 0
+  width 100vw
+  box-sizing border-box
+  background-color #fff
+  margin auto
+  box-shadow 0 5px 20px rgba(0, 0, 0, 0.03), 0 6px 6px rgba(0, 0, 0, 0.05)
+  transition all 1s cubic-bezier(0.25, 0.8, 0.25, 1)
 
-  .mobile-header-bar
-    z-index 12
-    position fixed
-    top 0
-    width 100vw
-    box-sizing border-box
-    background-color #fff
-    margin auto
-    box-shadow 0 5px 20px rgba(0,0,0,0.03), 0 6px 6px rgba(0,0,0,0.05)
-    transition all 1s cubic-bezier(0.25, 0.8, 0.25, 1)
+#mobile-header
+  .mobile-header-title
+    display flex
+    align-items center
+    justify-content space-between
+    padding 1.2em
 
-  #mobile-header
-
-    .mobile-header-title
-      display flex
-      align-items center
-      justify-content space-between
-      padding 1.2em
-
-      .mobile-home-link
-        text-decoration none
-        text-transform uppercase
-        font-family PT Serif, Serif
-        color #222
-        font-weight bold
-
-
-  .mobile-nav-item
-    list-style none
-
-    a
+    .mobile-home-link
       text-decoration none
+      text-transform uppercase
+      font-family PT Serif, Serif
+      color #222
+      font-weight bold
 
-  .menu-divider
-    margin 0
+.mobile-nav-item
+  list-style none
 
-  .mobile-menu-wrapper
-    max-height 0
-    overflow hidden
-    transition 0.3s ease
-    background-color #fff
+  a
+    text-decoration none
 
-  .mobile-menu-wrapper.open
-    max-height 450px
-    transition 0.3s ease
+.menu-divider
+  margin 0
 
-  @media (min-width: $MQMobile)
-    #mobile-header
-      display none
+.mobile-menu-wrapper
+  max-height 0
+  overflow hidden
+  transition 0.3s ease
+  background-color #fff
+
+.mobile-menu-wrapper.open
+  max-height 450px
+  transition 0.3s ease
+
+@media (min-width: $MQMobile)
+  #mobile-header
+    display none
 </style>

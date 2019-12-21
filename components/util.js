@@ -3,25 +3,25 @@ export const extRE = /\.(md|html)$/
 export const endingSlashRE = /\/$/
 export const outboundRE = /^(https?:|mailto:|tel:)/
 
-export function normalize (path) {
+export function normalize(path) {
   return decodeURI(path)
     .replace(hashRE, '')
     .replace(extRE, '')
 }
 
-export function isExternal (path) {
+export function isExternal(path) {
   return outboundRE.test(path)
 }
 
-export function isMailto (path) {
+export function isMailto(path) {
   return /^mailto:/.test(path)
 }
 
-export function isTel (path) {
+export function isTel(path) {
   return /^tel:/.test(path)
 }
 
-export function ensureExt (path) {
+export function ensureExt(path) {
   if (isExternal(path)) {
     return path
   }
@@ -43,15 +43,15 @@ export function ensureExt (path) {
  * @returns {Element}
  */
 export function findContainerInVm(ref, vm, def) {
-  if (!ref) return def;
-  let container;
-  let parent = vm;
+  if (!ref) return def
+  let container
+  let parent = vm
   while ((parent = parent.$parent) && !container) {
-    container = parent.$refs[ref];
+    container = parent.$refs[ref]
   }
   // Ensure it's html element (ref could be component)
   if (container && container.$el) {
-    container = container.$el;
+    container = container.$el
   }
-  return container || def;
+  return container || def
 }
