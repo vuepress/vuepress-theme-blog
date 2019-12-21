@@ -2,7 +2,12 @@
   "name": "@vuepress/theme-blog",
   "version": "1.3.3",
   "description": "Default blog theme for VuePress",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "ulivz/vuepress-theme-blog"
+  },
+  "license": "MIT",
+  "author": "ulivz<chl814@foxmail.com>",
   "files": [
     "index.js",
     "styles",
@@ -11,14 +16,15 @@
     "fonts",
     "components"
   ],
+  "main": "index.js",
   "scripts": {
-    "test": "npm run lint && jest",
-    "lint": "eslint . --ext .js,.vue",
-    "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "example:dev": "vuepress dev example --temp example/.temp",
+    "docs:dev": "vuepress dev docs",
     "example:build": "vuepress build example --temp example/.temp",
-    "prepublishOnly": "npm run example:build && conventional-changelog -p angular -r 2 -i CHANGELOG.md -s"
+    "example:dev": "vuepress dev example --temp example/.temp",
+    "lint": "eslint . --ext .js,.vue",
+    "prepublishOnly": "npm run example:build && conventional-changelog -p angular -r 2 -i CHANGELOG.md -s",
+    "test": "npm run lint && jest"
   },
   "husky": {
     "hooks": {
@@ -29,14 +35,12 @@
     "*.{js,vue}": [
       "eslint --fix",
       "git add"
+    ],
+    "package.json": [
+      "sort-package-json",
+      "git add"
     ]
   },
-  "repository": {
-    "url": "ulivz/vuepress-theme-blog",
-    "type": "git"
-  },
-  "author": "ulivz<chl814@foxmail.com>",
-  "license": "MIT",
   "dependencies": {
     "@vuepress/plugin-blog": "^1.5.1",
     "@vuepress/plugin-medium-zoom": "1.0.0",
@@ -55,6 +59,7 @@
     "eslint-plugin-vue": "^6.0.1",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
+    "sort-package-json": "^1.31.0",
     "vuepress": "^1.0.0"
   },
   "publishConfig": {
