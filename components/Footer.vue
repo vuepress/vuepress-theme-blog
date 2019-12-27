@@ -27,6 +27,7 @@
 
 <script>
 import {
+  CodepenIcon,
   FacebookIcon,
   GithubIcon,
   GitlabIcon,
@@ -37,11 +38,11 @@ import {
   MessageSquareIcon,
   PhoneIcon,
   TwitterIcon,
-  CodepenIcon,
 } from 'vue-feather-icons'
 
 export default {
   components: {
+    CodepenIcon,
     FacebookIcon,
     GithubIcon,
     GitlabIcon,
@@ -52,7 +53,6 @@ export default {
     MessageSquareIcon,
     PhoneIcon,
     TwitterIcon,
-    CodepenIcon,
   },
 
   computed: {
