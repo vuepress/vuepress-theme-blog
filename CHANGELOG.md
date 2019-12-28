@@ -1,3 +1,13 @@
+# [1.4.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.3...v1.4.0) (2019-12-28)
+
+
+### Features
+
+* add contact type 'codepen' ([#30](https://github.com/ulivz/vuepress-theme-blog/issues/30)) ([2419317](https://github.com/ulivz/vuepress-theme-blog/commit/24193173650bc6b5eb7098480ec63f0162ee5962))
+* support newsletter ([#33](https://github.com/ulivz/vuepress-theme-blog/issues/33)) ([88246ed](https://github.com/ulivz/vuepress-theme-blog/commit/88246edd1fe0ee67a0cc3a3c91bda51b7f67d451))
+
+
+
 ## [1.3.3](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.2...v1.3.3) (2019-11-23)
 
 
