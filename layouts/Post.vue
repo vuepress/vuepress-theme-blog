@@ -2,6 +2,7 @@
   <div id="vuperess-theme-blog__post-layout">
     <div class="vuepress-blog-theme-content">
       <Content />
+      <Newsletter v-if="$service.email.enabled" />
       <hr />
       <Comment />
     </div>
@@ -11,12 +12,14 @@
 
 <script>
 import Toc from '@theme/components/Toc.vue'
+import Newsletter from '@theme/components/Newsletter.vue'
 import { Comment } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
   components: {
     Toc,
     Comment,
+    Newsletter,
   },
 }
 </script>
