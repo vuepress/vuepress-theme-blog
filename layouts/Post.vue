@@ -12,14 +12,13 @@
 
 <script>
 import Toc from '@theme/components/Toc.vue'
-import Newsletter from '@theme/components/Newsletter.vue'
 import { Comment } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
   components: {
     Toc,
     Comment,
-    Newsletter,
+    Newsletter: () => import('@theme/components/Newsletter.vue'),
   },
 }
 </script>
