@@ -21,7 +21,7 @@
 
         <div v-if="page.frontmatter.date" class="ui-post-date">
           <ClockIcon />
-          <span>{{ resovlePostDate(page.frontmatter.date) }}</span>
+          <span>{{ resolvePostDate(page.frontmatter.date) }}</span>
         </div>
       </div>
     </div>
@@ -37,6 +37,7 @@
 /* global THEME_BLOG_PAGINATION_COMPONENT */
 
 import Vue from 'vue'
+import dayjs from 'dayjs'
 import { NavigationIcon, ClockIcon } from 'vue-feather-icons'
 import {
   Pagination,
@@ -76,8 +77,10 @@ export default {
       return Vue.component(n) || Pagination
     },
 
-    resovlePostDate(date) {
-      return new Date(date.replace(/\-/g, '/').trim()).toDateString()
+    resolvePostDate(date) {
+      return dayjs(date).format(
+        this.$themeConfig.dateFormat || 'ddd MMM DD YYYY'
+      )
     },
   },
 }

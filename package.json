@@ -47,6 +47,7 @@
     "@vuepress/plugin-nprogress": "1.0.0",
     "@vuepress/plugin-pwa": "1.0.0",
     "@vuepress/plugin-search": "1.0.0",
+    "dayjs": "^1.8.19",
     "remove-markdown": "^0.3.0",
     "vue-feather-icons": "^4.21.0"
   },
