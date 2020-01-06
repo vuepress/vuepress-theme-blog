@@ -1,5 +1,5 @@
 <template>
-  <div id="vuperess-theme-blog__post-layout">
+  <div id="vuepress-theme-blog__post-layout">
     <div class="vuepress-blog-theme-content">
       <Content />
       <Newsletter v-if="$service.email.enabled" />
