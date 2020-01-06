@@ -6,10 +6,10 @@
           <NavLink :link="page.path">{{ page.title }}</NavLink>
         </div>
 
-        <div class="ui-post-summary">
+        <p class="ui-post-summary">
           {{ page.frontmatter.summary || page.summary }}
           <!-- <Content :page-key="page.key" slot-key="intro"/>-->
-        </div>
+        </p>
 
         <div v-if="page.frontmatter.author" class="ui-post-author">
           <NavigationIcon />
@@ -97,9 +97,6 @@ export default {
     border-bottom 0px
     margin-bottom 0px
 
-  p
-    margin 0
-
 .ui-post-title
   font-family PT Serif, Serif
   font-size 28px
@@ -116,7 +113,6 @@ export default {
 
 .ui-post-summary
   font-size 14px
-  margin-bottom 15px
   color rgba(0, 0, 0, 0.54)
   font-weight 200
 
