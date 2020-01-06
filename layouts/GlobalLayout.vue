@@ -1,5 +1,5 @@
 <template>
-  <div id="vuperess-theme-blog__global-layout">
+  <div id="vuepress-theme-blog__global-layout">
     <Header />
     <MobileHeader
       :is-open="isMobileHeaderOpen"
