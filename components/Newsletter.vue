@@ -1,23 +1,25 @@
 <template>
   <SimpleNewsletter v-slot="{ slotProps }">
-    <div class="newsletter__title">{{ slotProps.title }}</div>
-    <div class="newsletter__content">{{ slotProps.content }}</div>
-    <div class="newsletter__fields">
-      <input
-        v-model="slotProps.mail"
-        class="newsletter__input"
-        type="email"
-        name="email"
-        aria-label="Email"
-        placeholder="Email"
-        required
-        autocapitalize="off"
-        autocorrect="off"
-        data-cy="email"
-      />
-      <button type="submit" class="newsletter__button" data-cy="submit">
-        {{ slotProps.submitText }}
-      </button>
+    <div class="newsletter__wrap">
+      <div class="newsletter__title">{{ slotProps.title }}</div>
+      <div class="newsletter__content">{{ slotProps.content }}</div>
+      <div class="newsletter__fields">
+        <input
+          v-model="slotProps.mail"
+          class="newsletter__input"
+          type="email"
+          name="email"
+          aria-label="Email"
+          placeholder="Email"
+          required
+          autocapitalize="off"
+          autocorrect="off"
+          data-cy="email"
+        />
+        <button type="submit" class="newsletter__button" data-cy="submit">
+          {{ slotProps.submitText }}
+        </button>
+      </div>
     </div>
   </SimpleNewsletter>
 </template>
@@ -31,17 +33,18 @@ export default {
 
 <style lang="stylus">
 .newsletter
-  max-width none
+  .newsletter &__wrap
+    max-width none
 
-  &__fields
+  .newsletter &__fields
     display grid
     grid-template-columns 1fr 1fr
     grid-gap 10px
 
-  &__input
+  .newsletter &__input
     margin-bottom 0
 
-  &__button
+  .newsletter &__button
     transition box-shadow 0.2s ease, transform 0.2s ease
 
     &:hover
@@ -50,9 +53,9 @@ export default {
 
 @media (max-width: $MQMobile)
   .newsletter
-    &__fields
+    .newsletter &__fields
       display block
 
-    &__input
+    .newsletter &__input
       margin-bottom 10px
 </style>

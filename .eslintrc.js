@@ -11,6 +11,10 @@ module.exports = {
     "prettier/vue",
   ],
 
+  parserOptions: {
+    parser: 'babel-eslint' // Support dynamic import
+  },
+
   rules: {
     'no-undef': ['error'],
 

@@ -101,7 +101,7 @@ module.exports = {
         endpoint:'https://billyyyyy3320.us4.list-manage.com/subscribe/post?u=4905113ee00d8210c2004e038&amp;id=bd18d40138'
       }
 
-      return { ...blogPluginOptions, sitemap, comment,newsletter }
+      return { ...blogPluginOptions, sitemap, comment }
     }
 
     // paginationComponent: 'SimplePagination'
