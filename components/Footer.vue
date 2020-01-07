@@ -185,4 +185,13 @@ ol, ul
     .footer-left-wrap
       align-items center
       justify-content center
+
+    .footer-right-wrap
+      .copyright
+        display block
+
+        .copyright-item
+          line-height 1
+          border-right none
+          text-align center
 </style>
