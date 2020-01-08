@@ -145,5 +145,3 @@ export default {
     width 14px
     height 14px
 </style>
-
-<style src="prismjs/themes/prism-okaidia.css"></style>
