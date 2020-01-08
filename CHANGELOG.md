@@ -1,3 +1,20 @@
+# [1.5.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.4.0...v1.5.0) (2020-01-08)
+
+
+### Bug Fixes
+
+* disable newsletter casuing crash ([#36](https://github.com/ulivz/vuepress-theme-blog/issues/36)) ([3cddcc8](https://github.com/ulivz/vuepress-theme-blog/commit/3cddcc83940400472205a27307a57df9778f34d0))
+* highlighted lines were not highlighted ([#37](https://github.com/ulivz/vuepress-theme-blog/issues/37)) ([377be90](https://github.com/ulivz/vuepress-theme-blog/commit/377be90c2fd35dd7a20e091518aa8565c3c8101d))
+* resolve overflowing footer in mobile ([1412c9b](https://github.com/ulivz/vuepress-theme-blog/commit/1412c9bdbf8788e5bc8ae59ed9767d3899a7a2f3))
+* the spacing of summary is too narrow ([ce810ff](https://github.com/ulivz/vuepress-theme-blog/commit/ce810ff2ceb9971cc3c45ba4d78efb6307ee4ec9))
+
+
+### Features
+
+* support for custom dates (close [#25](https://github.com/ulivz/vuepress-theme-blog/issues/25))([#28](https://github.com/ulivz/vuepress-theme-blog/issues/28)) ([6c387bd](https://github.com/ulivz/vuepress-theme-blog/commit/6c387bd3d963dd89570456b2e1ca03301fe30ec3))
+
+
+
 # [1.4.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.3...v1.4.0) (2019-12-28)
 
 
