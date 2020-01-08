@@ -335,3 +335,9 @@ location: Hangzhou
 summary: Here's a quick post on what I found.
 ---
 ```
+
+## Stylus
+
+You can override the following [Stylus](http://stylus-lang.com/) variables in your `.vuepress/styles/palette.styl`:
+
+<<< @/styles/palette.styl
