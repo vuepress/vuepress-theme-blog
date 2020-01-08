@@ -37,5 +37,3 @@ export default {
   @media (min-width: $MQNarrow)
     box-shadow 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.07)
 </style>
-
-<style src="prismjs/themes/prism-okaidia.css"></style>
