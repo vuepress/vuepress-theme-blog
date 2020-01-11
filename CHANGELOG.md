@@ -1,3 +1,13 @@
+## [1.5.1](https://github.com/ulivz/vuepress-theme-blog/compare/v1.5.0...v1.5.1) (2020-01-11)
+
+
+### Features
+
+* bump blog plugin ([2d6269c](https://github.com/ulivz/vuepress-theme-blog/commit/2d6269cccbf13cdb7bb22fe3028ea8faa673490a))
+* set up defualt nav ([#42](https://github.com/ulivz/vuepress-theme-blog/issues/42)) ([582d5fb](https://github.com/ulivz/vuepress-theme-blog/commit/582d5fbc6924ddef10bc6b64fc53090967978ddf))
+
+
+
 # [1.5.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.4.0...v1.5.0) (2020-01-08)
 
 
