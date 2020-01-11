@@ -10,20 +10,22 @@ module.exports = {
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#nav
      */
-    nav: [
-      {
-        text: 'Blog',
-        link: '/',
-      },
-      {
-        text: 'Tags',
-        link: '/tag/',
-      },
-      {
-        text: 'About',
-        link: '/about/',
-      },
-    ],
+
+    // nav: [
+    //   {
+    //     text: 'Blog',
+    //     link: '/',
+    //   },
+    //   {
+    //     text: 'Tags',
+    //     link: '/tag/',
+    //   },
+    //   {
+    //     text: 'About',
+    //     link: '/about/',
+    //   },
+    // ],
+
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#footer
      */
@@ -85,7 +87,9 @@ module.exports = {
         },
       ],
     },
-
+    /**
+     * Ref: https://vuepress-theme-blog.ulivz.com/#modifyblogpluginoptions
+     */
     modifyBlogPluginOptions (blogPluginOptions) {
       const sitemap = {
         hostname: 'https://yourdomain'
@@ -105,8 +109,29 @@ module.exports = {
         endpoint:'https://billyyyyy3320.us4.list-manage.com/subscribe/post?u=4905113ee00d8210c2004e038&amp;id=bd18d40138'
       }
 
-      return { ...blogPluginOptions, sitemap, comment }
-    }
+      return { ...blogPluginOptions, sitemap, comment, newsletter }
+    },
+    /**
+     * Ref: https://vuepress-theme-blog.ulivz.com/#summary
+     */
+
+    // summary:false,
+
+    /**
+     * Ref: https://vuepress-theme-blog.ulivz.com/#summarylength
+     */
+
+    // summaryLength:100,
+
+    /**
+     * Ref: https://vuepress-theme-blog.ulivz.com/#pwa
+     */
+
+    // pwa:true,
+
+    /**
+     * Ref: https://vuepress-theme-blog.ulivz.com/#paginationcomponent
+     */
 
     // paginationComponent: 'SimplePagination'
   },
