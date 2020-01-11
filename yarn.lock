@@ -1008,10 +1008,10 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
-"@vuepress/plugin-blog@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.7.1.tgz#42a543937140d23ab9db8733aad8d2cb5ab57b15"
-  integrity sha512-+P81RQuo4wIhxaI2VegF/XMChoChSvD01YSEqymGEY55P8bi5hDqQ0EJaRx0Uy2IXWwLb6aLjpmVMR1L7A1t+g==
+"@vuepress/plugin-blog@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.8.0.tgz#2e32922e8461197421c8eeb5a15a2cf92547ab8f"
+  integrity sha512-sBKDkEsCKJds0WzgTiAHWhgNPHCRZ0SVWjx8k7jxQLzN8SCz4DhvvJ8RpsrrAdWKuoX+VSUb23jEBSLf5Lrk8A==
   dependencies:
     "@vssue/api-github-v3" "^1.1.2"
     "@vssue/vuepress-plugin-vssue" "^1.2.0"
