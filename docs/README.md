@@ -1,337 +1,142 @@
 ---
 sidebar: auto
+next: /config/
 ---
 
-# @vuepress/theme-blog
+# Guide
+
+
+## Intro
 
 > Default blog theme for VuePress 
 
-## Install
+You must distinguish between [official blog plugin](https://vuepress-plugin-blog.ulivz.com/) and this theme. Both of them are maintained by [VuePress](https://vuepress.vuejs.org/). We try to implement all the common and necessary blog features in the plugin, and pay more attention to the interactive experience in the theme. So, the plugin might be reused in several blog themes, and this theme is one of them.
+
+## Installation
 
 ```bash
-yarn add @vuepress/theme-blog -D
-# OR npm install @vuepress/theme-blog -D
+mkdir blog && cd blog # Create an empty directory and go into it
+
+yarn add vuepress @vuepress/theme-blog -D # Install the dependencies
+# OR npm install vuepress @vuepress/theme-blog -D
+```
+## Folder structure
+
+Here's the recommended project structure:
+```bash
+├── blog
+│   ├── _posts
+│   │   ├── 2018-11-7-frontmatter-in-vuepress.md #example
+│   │   ├── 2019-2-26-markdown-slot.md #example
+│   │   └── 2019-5-6-writing-a-vuepress-theme.md #example
+│   └── .vuepress
+│       ├── `components` _(**Optional**)_
+│       ├── `public` _(**Optional**)_
+│       ├── `styles` _(**Optional**)_
+│       │   ├── index.styl
+│       │   └── palette.styl
+│       ├── config.js
+│       └── `enhanceApp.js` _(**Optional**)_
+└── package.json
 ```
 
-## Usage
+**Required**:
+
+- `blog/.vuepress/config.js`: Entry file of configuration, can also be `yml` or `toml`.
+- `blog/_posts`: Stores your post content.
+
+**Optional**:
+
+
+If you wish to configure the files below, you'll need some knowledge of [VuePress](https://vuepress.vuejs.org/).
+
+- `blog/.vuepress/components`: The Vue components in this directory will be automatically registered as global components.
+- `blog/.vuepress/styles`: Stores style related files.
+- `blog/.vuepress/styles/index.styl`: Automatically applied global style files, generated at the ending of the CSS file, have a higher priority than the default style.
+- `blog/.vuepress/styles/palette.styl`: The palette is used to override the default color constants and to set the color constants of Stylus.
+- `blog/.vuepress/public`: Static resource directory.
+- `blog/.vuepress/enhanceApp.js`: App level enhancement.
+
+
+## Using @vuepress/theme-blog
+
+You must add `@vuepress/theme-blog` as a theme in `.vuepress/config.js`. `@vuepress/theme-blog` is configurable, but we will use the defaults for now.
 
 ```js
 // .vuepress/config.js
 module.exports = {
-  theme: '@vuepress/blog',
+  title: 'VuePress Blog Example', // Title for the site. This will be displayed in the navbar.
+  theme: '@vuepress/theme-blog',
   themeConfig: {
     // Please keep looking down to see the available options.
   }
 }
 ```
-
-## Options
-
-### dateFormat
-
-- Type: `string'
-- Default: 'ddd MMM DD YYYY'
-
-You can find all available formats [here](https://github.com/iamkun/dayjs/blob/dev/docs/en/API-reference.md#displaying)
-
-e.g.
-
-```js
-module.exports = {
-  themeConfig: {
-    dateFormat: 'YYYY-MM-DD'
+Add the scripts to package.json file:
+```json
+// package.json
+{
+  ...
+  "scripts": {
+    ...
+    "dev": "vuepress dev blog", // starts a development server with automatic reload.
+    "build": "vuepress build blog" // builds your website.
   }
+  ...
 }
 ```
 
-### nav
+From now on, you can run `yarn dev` or `npm run dev` and head `localhost:8080` to see your blog!
 
-- Type: `Array<{ text: string, link: string }>`
-- Default: `undefined`
+## Generating content
 
-e.g.
+The `_posts` folder is where your blog posts live. You can simply write blog posts in Markdown.
 
-```js
-module.exports = {
-  themeConfig: {
-    nav: [
-      {
-        text: 'Home',
-        link: '/',
-      },
-      {
-        text: 'Archive',
-        link: '/archive/',
-      },
-      {
-        text: 'Tags',
-        link: '/tag/',
-      },
-    ],
-  },
-}
-```
-
-### footer
-
-#### footer.contact
-
-
-- Type: `Array<{ type: ContactType, link: string }>`
-- Default: `undefined`
-
-Contact information, displayed on the left side of footer.
-
-```js
-module.exports = {
-  themeConfig: {
-    footer: {
-      contact: [
-        {
-          type: 'github',
-          link: 'https://github.com/vuejs/vuepress',
-        },
-        {
-          type: 'twitter',
-          link: 'https://github.com/vuejs/vuepress',
-        },
-      ],
-    },
-  },
-}
-```
-
-For now `ContactType` supports following enums:
-
-- facebook
-- github
-- gitlab
-- instagram
-- linkedin
-- mail
-- messenger
-- phone
-- twitter
-- web
-- codepen
-
-::: tip
-Welcome contribution of adding more built-in contact type.
-:::
-
-#### footer.copyright
-
-Copyright information, displayed on the right side of footer.
-
-```js
-module.exports = {
-  themeConfig: {
-    footer: {
-      copyright: [
-        {
-          text: 'Privacy Policy',
-          link: 'https://policies.google.com/privacy?hl=en-US',
-        },
-        {
-          text: 'MIT Licensed | Copyright © 2018-present Vue.js',
-          link: '',
-        },
-      ],
-    },
-  },
-}
-```
-
-### modifyBlogPluginOptions
-
-A function used to modify the default blog plugin options of [@vuepress/plugin-blog](https://vuepress-plugin-blog.ulivz.com/).
-
-Here is the default blog plugin options:
-
-```js
-{
-  directories: [
-    {
-      id: 'post',
-      dirname: '_posts',
-      path: '/',
-      // layout: 'IndexPost', defaults to `Layout.vue`
-      itemLayout: 'Post',
-      itemPermalink: '/:year/:month/:day/:slug',
-      pagination: {
-        lengthPerPage: 5,
-      },
-    },
-  ],
-  frontmatters: [
-    {
-      id: "tag",
-      keys: ['tag', 'tags'],
-      path: '/tag/',
-      // layout: 'Tag',  defaults to `FrontmatterKey.vue`
-      frontmatter: { title: 'Tag' },
-      pagination: {
-        lengthPerPage: 5
-      }
-    },
-  ]
-}
-```
-
-
-Adding apply custom [document classifiers](https://vuepress-plugin-blog.ulivz.com/guide/getting-started.html#document-classifier):
-
-```js
-module.exports = {
-  themeConfig: {
-    modifyBlogPluginOptions(blogPluginOptions) {
-      const writingDirectoryClassifier = {
-        id: 'writing',
-        dirname: '_writings',
-        path: '/writings/',
-        layout: 'IndexWriting',
-        itemLayout: 'Writing',
-        itemPermalink: '/writings/:year/:month/:day/:slug',
-        pagination: {
-          perPagePosts: 5,
-        },
-      }
-      
-      blogPluginOptions.directories.push(writingDirectoryClassifier)
-      return blogPluginOptions
-    },
-  },
-}
-```
-
-Enabling commenting and sitemap:
-```js
-module.exports = {
-  themeConfig: {
-    modifyBlogPluginOptions(blogPluginOptions) {
-      const sitemap = {
-        hostname: 'https://yourdomain'
-      }
-
-      const comment = {
-        service: 'disqus',
-        shortname: 'disqus-shortname',
-        // service: 'vssue',
-        // owner: 'You',
-        // repo: 'Your repo',
-        // clientId: 'Your clientId',
-        // clientSecret: 'Your clientSecret',
-      }
-
-      return { ...blogPluginOptions, sitemap, comment }
-    },
-  },
-}
-```
-
-Since many features are powered by the plugin, we suggest you to read the [documentation](https://vuepress-plugin-blog.ulivz.com/).
-
-
-### summary
-
-- Type: `boolean`
-- Default: `true`
-
-Whether to extract summary from source markdowns.
-
-
-### summaryLength
-
-- Type: `number`
-- Default: `200`
-
-Set the length of summary.
-
-
-### pwa
-
-- Type: `boolean`
-- Default: `false`
-
-Whether to enable PWA support. this option is powered by the [official
-PWA plugin](https://v1.vuepress.vuejs.org/plugin/official/plugin-pwa.html).
-
-if you enable this option, the default options of the internal PWA
-plugin is as follows:
-
-```js
-{
-  serviceWorker: true,
-  updatePopup: true
-}
-```
-
-### paginationComponent
-
-- Type: `string`
-- Default: `Pagination`
-
-Custom the pagination component.
-
-The default is the 
-[pagination component](https://vuepress-plugin-blog.ulivz.com/components/#pagination) powerful by 
-[@vuepress/plugin-blog](https://github.com/ulivz/vuepress-plugin-blog):
-
-<img src="./assets/pagination.png" width="250" height="" style=""/>
-
-You can set this option to `SimplePagination` to enable another out-of-box 
-[simple pagination component](https://vuepress-plugin-blog.ulivz.com/components/#simplepagination):
-
-<img src="./assets/simple-pagination.png" width="250" height="" style=""/>
-
-You can also wirte a custom pagination component and register it as a global component. then pass its
-name to this option.
-
-## Front Matter
-
-### tag/tags
-
-- Type: `string|string[]`
-- Default: `200`
-
-e.g.
-
-```markdown
+All blog post files can begin with front matter which is typically used to set a layout or other meta data:
+```md
 ---
-tags: 
+date: 2020-01-11
+author: Billyyyyy3320
+location: Taipei  
+---
+
+# Hello World
+
+> This is official blog theme.
+
+My content.
+```
+You can name your post files anything you like but we recommend including the date at the front.
+It helps you organize and will be use as permalink by default. For example:
+
+```
+2018-11-7-frontmatter-in-vuepress.md 
+2019-2-26-markdown-slot.md 
+2019-5-6-writing-a-vuepress-theme.md 
+```
+
+## Blog tags
+
+By default, Navigate to `/tag/`, you'll see the tag entry page.
+You can set you own tags in front matter, and they'll automatically be classified:
+
+```yaml{3-5}
+---
+date: 2020-01-11
+tag: 
   - JavaScript
-  - DOM
+  - Vue
+author: Billyyyyy3320
+location: Taipei  
 ---
 ```
 
-### date
+## Final
 
-```markdown
----
-date: 2016-10-20 20:44:40
----
-```
+Now, Check out your blog at `localhost:8080`, if everything is ok, you might be interested in the following topics:
 
-### author
-
-```markdown
----
-author: ULIVZ
----
-```
-
-### location
-
-```markdown
----
-location: Hangzhou
----
-```
-
-### summary
-
-```markdown
----
-summary: Here's a quick post on what I found.
----
-```
+- Configure this theme: We'll discuss in [the next section](../config)
+- Deploy your blog: Read [the deploy section in VuePress documentation](https://vuepress.vuejs.org/guide/deploy.html)
+- Explore deeper: 
+  - Documentation of [VuePress](https://vuepress.vuejs.org/)
+  - Documentation of [official blog plugin](https://vuepress-plugin-blog.ulivz.com/)
