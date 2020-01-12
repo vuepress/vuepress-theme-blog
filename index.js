@@ -1,4 +1,6 @@
 const removeMd = require('remove-markdown')
+const path = require('path')
+const fs = require('fs-extra')
 
 module.exports = (themeConfig, ctx) => {
   themeConfig = Object.assign(themeConfig, {
@@ -79,6 +81,14 @@ module.exports = (themeConfig, ctx) => {
         ? themeConfig.paginationComponent
         : 'Pagination',
     },
+    ready() {
+      const dest = ctx.tempPath + '/fonts'
+      copyFonts(dest)
+    },
+    generated() {
+      const dest = ctx.outDir + '/fonts'
+      copyFonts(dest)
+    },
   }
 
   /**
@@ -101,4 +111,10 @@ module.exports = (themeConfig, ctx) => {
   }
 
   return config
+}
+
+function copyFonts(dest) {
+  const src = path.resolve(__dirname, 'fonts')
+  fs.ensureDirSync(dest)
+  fs.copySync(src, dest)
 }
