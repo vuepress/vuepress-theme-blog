@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot without any configuration 1`] = `
+Object {
+  "nav": Array [
+    Object {
+      "link": "/",
+      "text": "Blog",
+    },
+    Object {
+      "link": "/tag/",
+      "text": "Tags",
+    },
+  ],
+  "pwa": false,
+  "summary": true,
+  "summaryLength": 200,
+}
+`;
+
+exports[`should match snapshot without any configuration 2`] = `
+Object {
+  "alias": Object {
+    "fonts": "/Users/billy/Desktop/vuepress-projects/vuepress-theme-blog/fonts",
+  },
+  "define": Object {
+    "THEME_BLOG_PAGINATION_COMPONENT": "Pagination",
+  },
+  "extendPageData": [Function],
+  "plugins": Array [
+    "@vuepress/plugin-nprogress",
+    Array [
+      "@vuepress/medium-zoom",
+      true,
+    ],
+    Array [
+      "@vuepress/search",
+      Object {
+        "searchMaxSuggestions": 10,
+      },
+    ],
+    Array [
+      "@vuepress/blog",
+      Object {
+        "directories": Array [
+          Object {
+            "dirname": "_posts",
+            "id": "post",
+            "path": "/",
+          },
+        ],
+        "frontmatters": Array [
+          Object {
+            "id": "tag",
+            "keys": Array [
+              "tag",
+              "tags",
+            ],
+            "path": "/tag/",
+          },
+        ],
+        "globalPagination": Object {
+          "lengthPerPage": 5,
+        },
+      },
+    ],
+  ],
+}
+`;
