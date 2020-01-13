@@ -1,5 +1,5 @@
 const removeMd = require('remove-markdown')
-
+const path = require('path')
 module.exports = (themeConfig, ctx) => {
   themeConfig = Object.assign(themeConfig, {
     nav: themeConfig.nav || [
@@ -78,6 +78,9 @@ module.exports = (themeConfig, ctx) => {
       THEME_BLOG_PAGINATION_COMPONENT: themeConfig.paginationComponent
         ? themeConfig.paginationComponent
         : 'Pagination',
+    },
+    alias: {
+      fonts: path.resolve(__dirname, 'fonts'),
     },
   }
 
