@@ -1,6 +1,11 @@
 const removeMd = require('remove-markdown')
 const path = require('path')
-module.exports = (themeConfig, ctx) => {
+const pick = require('lodash/pick')
+
+module.exports = themeConfig => {
+  /**
+   * Default theme configuration
+   */
   themeConfig = Object.assign(themeConfig, {
     nav: themeConfig.nav || [
       {
@@ -20,15 +25,15 @@ module.exports = (themeConfig, ctx) => {
     pwa: !!themeConfig.pwa,
   })
 
+  /**
+   * Configure blog plugin
+   */
   const defaultBlogPluginOptions = {
     directories: [
       {
         id: 'post',
         dirname: '_posts',
         path: '/',
-        pagination: {
-          lengthPerPage: 5,
-        },
       },
     ],
     frontmatters: [
@@ -36,20 +41,38 @@ module.exports = (themeConfig, ctx) => {
         id: 'tag',
         keys: ['tag', 'tags'],
         path: '/tag/',
-        pagination: {
-          lengthPerPage: 5,
-        },
       },
     ],
+    globalPagination: {
+      lengthPerPage: 5,
+    },
   }
 
   const { modifyBlogPluginOptions } = themeConfig
 
-  const blogPluginOptions =
-    typeof modifyBlogPluginOptions === 'function'
-      ? modifyBlogPluginOptions(defaultBlogPluginOptions)
-      : defaultBlogPluginOptions
+  let blogPluginOptions
 
+  if (modifyBlogPluginOptions === 'function') {
+    blogPluginOptions = modifyBlogPluginOptions(defaultBlogPluginOptions)
+  } else {
+    const properties = [
+      'directories',
+      'frontmatters',
+      'globalPagination',
+      'sitemap',
+      'comment',
+      'newsletter',
+    ]
+    blogPluginOptions = Object.assign(
+      {},
+      defaultBlogPluginOptions,
+      pick(themeConfig, properties)
+    )
+  }
+
+  /**
+   * Integrate plugins
+   */
   const plugins = [
     '@vuepress/plugin-nprogress',
     ['@vuepress/medium-zoom', true],
@@ -62,6 +85,9 @@ module.exports = (themeConfig, ctx) => {
     ['@vuepress/blog', blogPluginOptions],
   ]
 
+  /**
+   * Enable pwa
+   */
   if (themeConfig.pwa) {
     plugins.push([
       '@vuepress/pwa',

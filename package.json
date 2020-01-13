@@ -23,8 +23,8 @@
     "example:build": "vuepress build example --temp example/.temp",
     "example:dev": "vuepress dev example --temp example/.temp",
     "lint": "eslint . --ext .js,.vue",
-    "prepublishOnly": "npm run example:build && conventional-changelog -p angular -r 2 -i CHANGELOG.md -s",
-    "test": "npm run lint && jest"
+    "prepublishOnly": "npm run test && npm run example:build && conventional-changelog -p angular -r 2 -i CHANGELOG.md -s",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -60,6 +60,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^6.0.1",
     "husky": "^3.1.0",
+    "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
     "sort-package-json": "^1.31.0",
     "vuepress": "^1.2.0"
