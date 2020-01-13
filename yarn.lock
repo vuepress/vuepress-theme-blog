@@ -1363,13 +1363,14 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
-"@vuepress/plugin-blog@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.8.0.tgz#2e32922e8461197421c8eeb5a15a2cf92547ab8f"
-  integrity sha512-sBKDkEsCKJds0WzgTiAHWhgNPHCRZ0SVWjx8k7jxQLzN8SCz4DhvvJ8RpsrrAdWKuoX+VSUb23jEBSLf5Lrk8A==
+"@vuepress/plugin-blog@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.8.1.tgz#ab5f15621f61e3d214cc054b28a3b8ae9cd001ec"
+  integrity sha512-6LGNBesXt+FzTHLcd1FUcei54vL+q5/1OH8gvT4UnN2TArU5OO/EGqUi2xV0Buf3cUtgKlt18BDjbYSXvw41ZA==
   dependencies:
     "@vssue/api-github-v3" "^1.1.2"
     "@vssue/vuepress-plugin-vssue" "^1.2.0"
+    dayjs "^1.8.19"
     vuejs-paginate "^2.1.0"
     vuepress-plugin-disqus-comment "^0.2.3"
     vuepress-plugin-mailchimp "^1.4.1"
