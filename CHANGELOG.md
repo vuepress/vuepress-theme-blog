@@ -1,3 +1,19 @@
+# [1.6.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.5.1...v1.6.0) (2020-01-13)
+
+
+### Bug Fixes
+
+* fonts are inaccessible (fix [#40](https://github.com/ulivz/vuepress-theme-blog/issues/40))([#47](https://github.com/ulivz/vuepress-theme-blog/issues/47)) ([dd6bb0d](https://github.com/ulivz/vuepress-theme-blog/commit/dd6bb0d0ad1c2b4589e4f15dcc50bd03fa1e73bf))
+* sorter doesn't work fine when writing date in 2-digits ([3c6a68f](https://github.com/ulivz/vuepress-theme-blog/commit/3c6a68fa872f8ac1a9dffe6756113b198b9eaaa7))
+
+
+### Features
+
+* smooth scroll ([#49](https://github.com/ulivz/vuepress-theme-blog/issues/49)) ([16a7816](https://github.com/ulivz/vuepress-theme-blog/commit/16a78160766c84edf2aecc435c29c103b3b97e6a))
+* spread out blog plugin options to theme options (close [#34](https://github.com/ulivz/vuepress-theme-blog/issues/34)) ([#48](https://github.com/ulivz/vuepress-theme-blog/issues/48)) ([d6bfae3](https://github.com/ulivz/vuepress-theme-blog/commit/d6bfae369d3a8ae3754786015527ce962dfa7f00))
+
+
+
 ## [1.5.1](https://github.com/ulivz/vuepress-theme-blog/compare/v1.5.0...v1.5.1) (2020-01-11)
 
 
