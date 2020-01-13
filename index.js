@@ -73,6 +73,9 @@ module.exports = themeConfig => {
   /**
    * Integrate plugins
    */
+
+  const enableSmoothScroll = themeConfig.smoothScroll === true
+
   const plugins = [
     '@vuepress/plugin-nprogress',
     ['@vuepress/medium-zoom', true],
@@ -83,6 +86,7 @@ module.exports = themeConfig => {
       },
     ],
     ['@vuepress/blog', blogPluginOptions],
+    ['smooth-scroll', enableSmoothScroll],
   ]
 
   /**

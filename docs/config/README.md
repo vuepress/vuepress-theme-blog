@@ -411,3 +411,18 @@ You can set this option to `SimplePagination` to enable another out-of-box
 You can also wirte a custom pagination component and register it as a global component. then pass its
 name to this option.
 
+## smoothScroll
+
+- Type: `boolean`
+- Default: `false`
+
+The `themeConfig.smoothScroll` option allows you to enable smooth scrolling.
+
+```JavaScript
+// .vuepress/config.js
+module.exports = {
+  themeConfig: {
+    smoothScroll: true
+  }
+}
+```

@@ -64,6 +64,10 @@ Object {
         },
       },
     ],
+    Array [
+      "smooth-scroll",
+      false,
+    ],
   ],
 }
 `;

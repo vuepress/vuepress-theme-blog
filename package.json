@@ -49,7 +49,8 @@
     "@vuepress/plugin-search": "1.0.0",
     "dayjs": "^1.8.19",
     "remove-markdown": "^0.3.0",
-    "vue-feather-icons": "^4.21.0"
+    "vue-feather-icons": "^4.21.0",
+    "vuepress-plugin-smooth-scroll": "^0.0.9"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
