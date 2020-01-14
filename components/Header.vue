@@ -39,8 +39,7 @@ export default {
   top 0
   width 100vw
   box-sizing border-box
-  // background lighten(#3eaf7c, 90%)
-  background-color #FFF
+  background-color $headerBgColor
   padding 20px 32px 20px
   margin auto
   box-shadow 0 5px 20px rgba(0, 0, 0, 0.03), 0 6px 6px rgba(0, 0, 0, 0.05)
@@ -62,7 +61,6 @@ export default {
 
   .title
     /* flex 0 0 200px */
-    color #000
     font-size 30px
     margin 0
     letter-spacing 2px
@@ -70,7 +68,7 @@ export default {
     text-transform uppercase
 
     a
-      color #000
+      color $darkTextColor
       font-weight bold
       font-family PT Serif, Serif
       text-decoration none
@@ -110,12 +108,12 @@ export default {
           box-shadow 0 0 5px $accentColor
 
       .suggestions
-        border 1px solid #000
+        border 1px solid $darkBorderColor
         top 40px
         right 0
 
         a
-          color #000
+          color $darkTextColor
           text-decoration none
 
           &.focused

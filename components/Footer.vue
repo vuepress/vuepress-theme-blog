@@ -119,8 +119,7 @@ ol, ul
 .footer
   height 60px
   box-sizing border-box
-  background-color #000
-  color #FFF
+  background-color $footerBgColor
   display flex
   padding 15px 32px
 
@@ -138,7 +137,7 @@ ol, ul
 
         a
           font-size 12px
-          color rgba(255, 255, 255, 0.45)
+          color $footerColor
           text-decoration none
           transition color 0.3s
 
@@ -163,14 +162,14 @@ ol, ul
         padding 0 10px
         position relative
         line-height 12px
-        border-right 1px solid rgba(255, 255, 255, 0.6)
+        border-right 1px solid $footerColor
 
         &:last-child
           border-right none
 
         a
           font-size 12px
-          color rgba(255, 255, 255, 0.6)
+          color $footerColor
           text-decoration none
           transition color 0.3s
 

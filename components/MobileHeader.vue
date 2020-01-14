@@ -48,7 +48,7 @@ export default {
   top 0
   width 100vw
   box-sizing border-box
-  background-color #fff
+  background-color $headerBgColor
   margin auto
   box-shadow 0 5px 20px rgba(0, 0, 0, 0.03), 0 6px 6px rgba(0, 0, 0, 0.05)
   transition all 1s cubic-bezier(0.25, 0.8, 0.25, 1)
@@ -80,7 +80,7 @@ export default {
   max-height 0
   overflow hidden
   transition 0.3s ease
-  background-color #fff
+  background-color $headerBgColor
 
 .mobile-menu-wrapper.open
   max-height 450px
