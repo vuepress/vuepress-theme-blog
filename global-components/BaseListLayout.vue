@@ -94,7 +94,7 @@ export default {
 .ui-post
   padding-bottom 25px
   margin-bottom 25px
-  border-bottom 1px solid #f1f1f1
+  border-bottom 1px solid $borderColor
 
   &:last-child
     border-bottom 0px
@@ -107,7 +107,7 @@ export default {
 
   a
     cursor pointer
-    color #000
+    color $darkTextColor
     transition all 0.2s
     text-decoration none
 
@@ -116,7 +116,7 @@ export default {
 
 .ui-post-summary
   font-size 14px
-  color rgba(0, 0, 0, 0.54)
+  color rgba($darkTextColor, 0.54)
   font-weight 200
 
 .ui-post-author
@@ -124,7 +124,7 @@ export default {
   align-items center
   font-size 12px
   line-height 12px
-  color rgba(0, 0, 0, 0.84)
+  color rgba($darkTextColor, 0.84)
   margin-bottom 3px
   font-weight 400
 
@@ -137,7 +137,7 @@ export default {
   display flex
   align-items center
   font-size 12px
-  color rgba(0, 0, 0, 0.54)
+  color rgba($darkTextColor, 0.54)
   font-weight 200
 
   svg

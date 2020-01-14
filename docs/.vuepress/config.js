@@ -14,7 +14,8 @@ module.exports = {
     sidebar: {
       '/config/': [
         '',
-        'front-matter'
+        'front-matter',
+        'palette'
       ],
     },
     smoothScroll: true,

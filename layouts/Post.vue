@@ -31,7 +31,7 @@ export default {
   font-size 16px
   letter-spacing 0px
   font-family PT Serif, Serif
-  color #2c3e50
+  color $textColor
   position relative
 
   @media (min-width: $MQNarrow)
