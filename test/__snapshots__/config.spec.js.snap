@@ -54,7 +54,6 @@ Object {
           Object {
             "id": "tag",
             "keys": Array [
-              "tag",
               "tags",
             ],
             "path": "/tag/",

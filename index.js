@@ -39,7 +39,7 @@ module.exports = themeConfig => {
     frontmatters: [
       {
         id: 'tag',
-        keys: ['tag', 'tags'],
+        keys: ['tags'],
         path: '/tag/',
       },
     ],

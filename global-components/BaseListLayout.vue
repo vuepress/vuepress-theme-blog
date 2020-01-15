@@ -11,7 +11,7 @@
           <!-- <Content :page-key="page.key" slot-key="intro"/>-->
         </p>
 
-        <div v-if="page.frontmatter.author" class="ui-post-author">
+        <div v-if="page.frontmatter.author" class="ui-post-meta ui-post-author">
           <NavigationIcon />
           <span
             >{{ page.frontmatter.author }} in
@@ -19,9 +19,20 @@
           >
         </div>
 
-        <div v-if="page.frontmatter.date" class="ui-post-date">
+        <div v-if="page.frontmatter.date" class="ui-post-meta ui-post-date">
           <ClockIcon />
           <span>{{ resolvePostDate(page.frontmatter.date) }}</span>
+        </div>
+
+        <div v-if="page.frontmatter.tags" class="ui-post-meta ui-post-tag">
+          <TagIcon />
+          <router-link
+            v-for="tag in resolvePostTags(page.frontmatter.tags)"
+            :key="tag"
+            :to="'/tag/' + tag"
+          >
+            {{ tag }}
+          </router-link>
         </div>
       </div>
     </div>
@@ -38,14 +49,14 @@
 
 import Vue from 'vue'
 import dayjs from 'dayjs'
-import { NavigationIcon, ClockIcon } from 'vue-feather-icons'
+import { NavigationIcon, ClockIcon, TagIcon } from 'vue-feather-icons'
 import {
   Pagination,
   SimplePagination,
 } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
-  components: { NavigationIcon, ClockIcon },
+  components: { NavigationIcon, ClockIcon, TagIcon },
 
   data() {
     return {
@@ -81,6 +92,11 @@ export default {
       return dayjs(date).format(
         this.$themeConfig.dateFormat || 'ddd MMM DD YYYY'
       )
+    },
+
+    resolvePostTags(tags) {
+      if (!tags || Array.isArray(tags)) return tags
+      return [tags]
     },
   },
 }
@@ -119,29 +135,45 @@ export default {
   color rgba($darkTextColor, 0.54)
   font-weight 200
 
-.ui-post-author
-  display flex
+.ui-post-meta
+  display inline-flex
   align-items center
   font-size 12px
   line-height 12px
-  color rgba($darkTextColor, 0.84)
-  margin-bottom 3px
-  font-weight 400
+
+  &:not(:last-child)
+    margin-bottom 3px
+    margin-right 20px
 
   svg
     margin-right 5px
     width 14px
     height 14px
 
+  @media (max-width: $MQMobile)
+    display flex
+
+    &:not(:last-child)
+      margin-bottom 10px
+
+.ui-post-author
+  color rgba($darkTextColor, 0.84)
+  font-weight 400
+
 .ui-post-date
-  display flex
-  align-items center
-  font-size 12px
   color rgba($darkTextColor, 0.54)
   font-weight 200
 
-  svg
+.ui-post-tag
+  color rgba($darkTextColor, 0.54)
+  font-weight 200
+
+  a
+    color inherit
+    font-weight 200
+    text-decoration none
     margin-right 5px
-    width 14px
-    height 14px
+
+    &:hover
+      color $accentColor
 </style>
