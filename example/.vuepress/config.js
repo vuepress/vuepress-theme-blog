@@ -177,7 +177,7 @@ module.exports = {
      * Ref: https://vuepress-theme-blog.ulivz.com/#summary
      */
 
-    // summary:false,
+    summary:false,
 
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#summarylength

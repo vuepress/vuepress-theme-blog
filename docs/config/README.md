@@ -361,7 +361,7 @@ Since many features are powered by the plugin, we suggest you to read the [docum
 - Type: `boolean`
 - Default: `true`
 
-Whether to extract summary from source markdowns. You can write summary manually by [front matter](./front-matter.md#summary).
+Whether to automatically extract summary from source markdowns. You can write summary manually by [front matter](./front-matter.md#summary). Summary is not only for displaying but also page meta description. 
 
 
 ## summaryLength

@@ -112,25 +112,28 @@ module.exports = themeConfig => {
     alias: {
       fonts: path.resolve(__dirname, 'fonts'),
     },
-  }
-
-  /**
-   * Generate summary.
-   */
-  if (themeConfig.summary) {
-    config.extendPageData = function(pageCtx) {
+    /**
+     * Generate summary.
+     */
+    extendPageData(pageCtx) {
       const strippedContent = pageCtx._strippedContent
       if (!strippedContent) {
         return
       }
-      pageCtx.summary =
-        removeMd(
-          strippedContent
-            .trim()
-            .replace(/^#+\s+(.*)/, '')
-            .slice(0, themeConfig.summaryLength)
-        ) + ' ...'
-    }
+      if (themeConfig.summary) {
+        pageCtx.summary =
+          removeMd(
+            strippedContent
+              .trim()
+              .replace(/^#+\s+(.*)/, '')
+              .slice(0, themeConfig.summaryLength)
+          ) + ' ...'
+        pageCtx.frontmatter.description = pageCtx.summary
+      }
+      if (pageCtx.frontmatter.summary) {
+        pageCtx.frontmatter.description = pageCtx.frontmatter.summary
+      }
+    },
   }
 
   return config
