@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.6.0...v1.7.0) (2020-01-17)
+
+
+### Features
+
+* enhance palette.stly (close [#44](https://github.com/ulivz/vuepress-theme-blog/issues/44)) ([3de1e63](https://github.com/ulivz/vuepress-theme-blog/commit/3de1e635c06f239a1da0f7b251f26f80cb4c3bdc))
+* improve mobile navbar ([#53](https://github.com/ulivz/vuepress-theme-blog/issues/53)) ([d6746ee](https://github.com/ulivz/vuepress-theme-blog/commit/d6746ee5ab167b683485eaee1e6096d3e3d4d0dc))
+* support RSS, Atom and JSON feed ([#54](https://github.com/ulivz/vuepress-theme-blog/issues/54)) ([b45d6a5](https://github.com/ulivz/vuepress-theme-blog/commit/b45d6a5ac7187329e809f6a9b4d7fdec7bf12f5e))
+* use summary as meta description ([9626ab8](https://github.com/ulivz/vuepress-theme-blog/commit/9626ab8dda63b3ec49a1ce6a8d4dcb995f132051))
+
+
+
 # [1.6.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.5.1...v1.6.0) (2020-01-13)
 
 
