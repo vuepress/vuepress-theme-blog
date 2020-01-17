@@ -49,6 +49,7 @@ Object {
             "path": "/",
           },
         ],
+        "feed": undefined,
         "frontmatters": Array [
           Object {
             "id": "tag",

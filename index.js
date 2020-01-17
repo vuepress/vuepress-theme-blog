@@ -55,6 +55,24 @@ module.exports = themeConfig => {
   if (typeof modifyBlogPluginOptions === 'function') {
     blogPluginOptions = modifyBlogPluginOptions(defaultBlogPluginOptions)
   } else {
+    let resolvedFeedOptions
+    const isFeedEnabled = themeConfig.feed && themeConfig.feed.canonical_base
+    if (isFeedEnabled) {
+      const {
+        rss = true,
+        atom = false,
+        json = false,
+        ...feedOptions
+      } = themeConfig.feed
+      resolvedFeedOptions = Object.assign({}, feedOptions, {
+        feeds: {
+          rss2: { enable: rss },
+          atom1: { enable: atom },
+          json1: { enable: json },
+        },
+      })
+    }
+
     const properties = [
       'directories',
       'frontmatters',
@@ -63,10 +81,15 @@ module.exports = themeConfig => {
       'comment',
       'newsletter',
     ]
+    const themeConfigPluginOptions = {
+      ...pick(themeConfig, properties),
+      feed: resolvedFeedOptions,
+    }
+
     blogPluginOptions = Object.assign(
       {},
       defaultBlogPluginOptions,
-      pick(themeConfig, properties)
+      themeConfigPluginOptions
     )
   }
 

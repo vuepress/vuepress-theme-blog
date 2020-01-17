@@ -270,6 +270,32 @@ Mailchimp is our default newsletter service. The only required property to enabl
 
 Please head [vuepress-plugin-mailchimp](https://vuepress-plugin-mailchimp.billyyyyy3320.com/#config) to see how to get your `endpoint`.
 
+## feed
+
+- Type: `object`
+- Default: `undefined`
+
+RSS, Atom, and even JSON feeds are supported. The only required property to enable feed is `canonical_base`:
+
+```JavaScript
+{
+  canonical_base:'http://yoursite',
+},
+```
+RSS is the default type of feed.
+
+All the options in [vuepress-plugin-feed](https://github.com/webmasterish/vuepress-plugin-feed#options) are available.
+Moreover, we present an easier approach to enable/disable the feed types, for instance:
+
+```JavaScript
+{
+  canonical_base:'http://yoursite',
+  rss:false
+  atom:true,
+  json:false
+}
+```
+
 ## modifyBlogPluginOptions <Badge text="Not recommended" type="warning"/>
 
 A function used to modify the blog plugin options of [@vuepress/plugin-blog](https://vuepress-plugin-blog.ulivz.com/). It'll override not only default options but also the six options above (`directories`, `frontmatters`, `globalPagination`, `sitemap`, `comment`, `newsletter`).

@@ -137,7 +137,7 @@ module.exports = {
      * Ref: https://vuepress-theme-blog.ulivz.com/#sitemap
      */
     sitemap: {
-      hostname: 'https://yourdomain'
+      hostname: 'https://example.vuepress-theme-blog.ulivz.com/'
     },
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#comment
@@ -152,6 +152,13 @@ module.exports = {
     newsletter: {
       endpoint: 'https://billyyyyy3320.us4.list-manage.com/subscribe/post?u=4905113ee00d8210c2004e038&amp;id=bd18d40138'
     },
+    /**
+     * Ref: https://vuepress-theme-blog.ulivz.com/#feed
+     */
+    feed:{
+      canonical_base:'https://example.vuepress-theme-blog.ulivz.com/',
+    },
+
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#modifyblogpluginoptions
      */
@@ -177,7 +184,7 @@ module.exports = {
      * Ref: https://vuepress-theme-blog.ulivz.com/#summary
      */
 
-    summary:false,
+    // summary:false,
 
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#summarylength
