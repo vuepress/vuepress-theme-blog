@@ -18,6 +18,9 @@
           >
             <NavLink :link="item.link">{{ item.text }}</NavLink>
           </li>
+          <li class="mobile-nav-item">
+            <Feed />
+          </li>
         </ul>
       </div>
     </div>
@@ -26,11 +29,12 @@
 
 <script>
 import { MenuIcon, XIcon } from 'vue-feather-icons'
-
+import Feed from './Feed'
 export default {
   components: {
     MenuIcon,
     XIcon,
+    Feed,
   },
   props: {
     isOpen: {

@@ -16,13 +16,7 @@
             </li>
           </ul>
           <SearchBox />
-          <a
-            v-if="getFirstEnabledFeed"
-            class="feed"
-            :href="getFirstEnabledFeed | getFeedFileName"
-          >
-            <RssIcon />
-          </a>
+          <Feed />
         </div>
       </div>
     </header>
@@ -30,28 +24,11 @@
 </template>
 
 <script>
-import { RssIcon } from 'vue-feather-icons'
 import SearchBox from '@SearchBox'
+import Feed from './Feed'
 
 export default {
-  components: { RssIcon, SearchBox },
-  filters: {
-    getFeedFileName(feed) {
-      if (feed === 'rss') return 'rss.xml'
-      if (feed === 'atom') return 'feed.atom'
-      if (feed === 'json') return 'feed.json'
-      return ''
-    },
-  },
-  computed: {
-    getFirstEnabledFeed() {
-      for (const feed in this.$service.feed) {
-        const isEnabled = this.$service.feed[feed]
-        if (isEnabled) return feed
-      }
-      return false
-    },
-  },
+  components: { SearchBox, Feed },
 }
 </script>
 
@@ -144,14 +121,6 @@ export default {
 
           &.focused
             color $accentColor
-
-    .feed
-      display flex
-      align-items center
-      color inherit
-
-      &:hover
-        color $accentColor
 
 @media (max-width: $MQMobile)
   #header
