@@ -12,7 +12,48 @@ next: /config/
 
 You must distinguish between [official blog plugin](https://vuepress-plugin-blog.ulivz.com/) and this theme. Both of them are maintained by [VuePress](https://vuepress.vuejs.org/). We try to implement all the common and necessary blog features in the plugin, and pay more attention to the interactive experience in the theme. So, the plugin might be reused in several blog themes, and this theme is one of them.
 
-## Installation
+## Quick Start
+
+To make it easier to get started, you can use [create-vuepress](https://github.com/vuepressjs/create-vuepress) which is indeed an npm package, but it doesn’t mean you need to install it manually first. Here's an example:
+
+Step 1: Scaffolding out a VuePress blog
+```bash
+yarn create vuepress [blogName]
+
+# And answer the following questions in CLI, for instance:
+
+# ? Select the boilerplate type blog
+
+# ? What's the name of your project? blog
+
+# ? What's the description of your project? Billyyyyy3320's personal website
+
+# ? What's your email? newsbielt703@gmail.com
+
+# ? What's your name? Billy Chin
+
+# ? What's the repo of your project. https://github.com/newsbielt703/Billy
+
+cd [blogName] && yarn
+```
+
+Step 2: Develop & Build
+
+```bash
+# Run localhost
+yarn dev
+
+# Build your VP blog
+yarn build
+```
+
+By default, VuePress dev server is listening at `http://localhost:8080/`, whereas the built files will be in `.vuepress/dist`.
+
+## Getting Started from scratch
+
+In this guide, you'll learn how to add default blog theme to a new project manually.
+
+### Installation
 
 ```bash
 mkdir blog && cd blog # Create an empty directory and go into it
@@ -20,7 +61,7 @@ mkdir blog && cd blog # Create an empty directory and go into it
 yarn add vuepress @vuepress/theme-blog -D # Install the dependencies
 # OR npm install vuepress @vuepress/theme-blog -D
 ```
-## Folder structure
+### Folder structure
 
 Here's the recommended project structure:
 ```bash
@@ -58,7 +99,7 @@ If you wish to configure the files below, you'll need some knowledge of [VuePres
 - `blog/.vuepress/enhanceApp.js`: App level enhancement.
 
 
-## Using @vuepress/theme-blog
+### Using @vuepress/theme-blog
 
 You must add `@vuepress/theme-blog` as a theme in `.vuepress/config.js`. `@vuepress/theme-blog` is configurable, but we will use the defaults for now.
 
@@ -88,7 +129,7 @@ Add the scripts to package.json file:
 
 From now on, you can run `yarn dev` or `npm run dev` and head `localhost:8080` to see your blog!
 
-## Generating content
+### Generating content
 
 The `_posts` folder is where your blog posts live. You can simply write blog posts in Markdown.
 
@@ -115,7 +156,7 @@ It helps you organize and will be use as permalink by default. For example:
 2019-5-6-writing-a-vuepress-theme.md 
 ```
 
-## Blog tags
+### Blog tags
 
 By default, Navigate to `/tag/`, you'll see the tag entry page.
 You can set you own tags in front matter, and they'll automatically be classified:
@@ -131,7 +172,7 @@ location: Taipei
 ---
 ```
 
-## Final
+### Final
 
 Now, Check out your blog at `localhost:8080`, if everything is ok, you might be interested in the following topics:
 
