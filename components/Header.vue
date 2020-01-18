@@ -85,7 +85,6 @@ export default {
       flex 0 0 auto
       display flex
       margin 0
-      align-items end
 
       .nav-item
         margin-left 20px
