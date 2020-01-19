@@ -40,7 +40,9 @@ tags:
 - Default: `undefined`
 - Required: `false`
 
-Date for the post. This will be used for permalink and displayed in the layout:
+Our recommended format is `YYYY-MM-DD`, but it actually accepts multi formats. VuePress is using `js-yaml` which follows standard yaml types, so you can find all available formats [here](https://yaml.org/type/timestamp.html).
+
+Date for the post. This will be used for permalink, sorting and displayed in the layout:
 
 ![Date](../assets/date.png)
 
