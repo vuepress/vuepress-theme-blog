@@ -1,3 +1,13 @@
+## [1.7.1](https://github.com/ulivz/vuepress-theme-blog/compare/v1.7.0...v1.7.1) (2020-01-19)
+
+
+### Bug Fixes
+
+* feed doesn't work fine when useing non-default directory name ([27405f8](https://github.com/ulivz/vuepress-theme-blog/commit/27405f872aaceb480e687dd4de043cd4b3dbe458))
+* remove mixed support & un-used css ([2bf23dd](https://github.com/ulivz/vuepress-theme-blog/commit/2bf23dd021463679a79ccaffe6d9c613bf3fd52b))
+
+
+
 # [1.7.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.6.0...v1.7.0) (2020-01-17)
 
 
