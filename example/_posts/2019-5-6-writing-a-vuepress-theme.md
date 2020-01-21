@@ -1,7 +1,7 @@
 ---
 title: Writing a vuepress theme 1
 date: 2019-5-6
-tag: 
+tags: 
   - theme
   - blog
   - vuepress

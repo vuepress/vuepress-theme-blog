@@ -164,7 +164,7 @@ You can set you own tags in front matter, and they'll automatically be classifie
 ---
 title: Hello World
 date: 2020-01-11
-tag: 
+tags: 
   - JavaScript
   - Vue
 author: Billyyyyy3320

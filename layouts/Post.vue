@@ -2,6 +2,12 @@
   <div id="vuepress-theme-blog__post-layout">
     <div class="vuepress-blog-theme-content">
       <h1 class="post-title">{{ $frontmatter.title }}</h1>
+      <PostMeta
+        :tags="$frontmatter.tags"
+        :author="$frontmatter.author"
+        :date="$frontmatter.date"
+        :location="$frontmatter.location"
+      />
       <Content />
       <Newsletter v-if="$service.email.enabled" />
       <hr />
@@ -13,11 +19,13 @@
 
 <script>
 import Toc from '@theme/components/Toc.vue'
+import PostMeta from '@theme/components/PostMeta.vue'
 import { Comment } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
   components: {
     Toc,
+    PostMeta,
     Comment,
     Newsletter: () => import('@theme/components/Newsletter.vue'),
   },
