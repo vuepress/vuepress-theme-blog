@@ -133,15 +133,14 @@ From now on, you can run `yarn dev` or `npm run dev` and head `localhost:8080` t
 
 The `_posts` folder is where your blog posts live. You can simply write blog posts in Markdown.
 
-All blog post files can begin with front matter which is typically used to set a layout or other meta data:
+All blog post files can begin with front matter. Only `title` is required, but we recommend you define all frontmatter variables as below. They'll be used to set the corresponding layout. Check out [frontmatter](config/front-matter) for more details. Here's an example:
 ```md
 ---
+title: Hello World
 date: 2020-01-11
 author: Billyyyyy3320
 location: Taipei  
 ---
-
-# Hello World
 
 > This is official blog theme.
 
@@ -161,8 +160,9 @@ It helps you organize and will be use as permalink by default. For example:
 By default, Navigate to `/tag/`, you'll see the tag entry page.
 You can set you own tags in front matter, and they'll automatically be classified:
 
-```yaml{3-5}
+```yaml{4-6}
 ---
+title: Hello World
 date: 2020-01-11
 tag: 
   - JavaScript

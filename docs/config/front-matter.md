@@ -1,9 +1,26 @@
 # Front Matter
 
+## title
+
+- Type: `string`
+- Default: `undefined`
+- Required: `true`
+
+The title for the page and content.
+
+e.g.
+
+```markdown
+---
+title: Hello World
+---
+```
+
 ## tag/tags
 
 - Type: `string|string[]`
 - Default: `undefined`
+- Required: `false`
 
 The key to classifier pages.
 
@@ -18,7 +35,14 @@ tags:
 ```
 
 ## date
-Date for the post. This will be used for permalink and displayed in the layout:
+
+- Type: `YYYY-MM-DD`
+- Default: `undefined`
+- Required: `false`
+
+Our recommended format is `YYYY-MM-DD`, but it actually accepts multi formats. VuePress is using `js-yaml` which follows standard yaml types, so you can find all available formats [here](https://yaml.org/type/timestamp.html).
+
+Date for the post. This will be used for permalink, sorting and displayed in the layout:
 
 ![Date](../assets/date.png)
 
@@ -30,6 +54,10 @@ date: 2016-10-20
 ```
 
 ## author
+
+- Type: `string`
+- Default: `undefined`
+- Required: `false`
 
 Author for the post. This will be displayed in the layout:
 
@@ -45,6 +73,10 @@ author: ULIVZ
 
 ## location
 
+- Type: `string`
+- Default: `undefined`
+- Required: `false`
+
 Location for the post. This will be displayed in the layout:
 
 ![Location](../assets/location.png)
@@ -58,6 +90,10 @@ location: Hangzhou
 ```
 
 ## summary
+
+- Type: `string`
+- Default: `undefined`
+- Required: `false`
 
 Summary for the post. This will be displayed in the layout:
 

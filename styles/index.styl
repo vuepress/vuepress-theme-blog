@@ -17,8 +17,6 @@ body
   background-color $bgColor
 
 {$contentClass}:not(.custom)
-  > *:first-child
-    margin-top $navbarHeight
 
   a:hover
     text-decoration underline
@@ -76,18 +74,6 @@ h1, h2, h3, h4, h5, h6
   font-weight 600
   line-height 1.25
   font-family PT Serif
-
-  {$contentClass}:not(.custom) > &
-    margin-top (0.5rem - $navbarHeight)
-    padding-top ($navbarHeight + 1rem)
-    margin-bottom 0
-
-    &:first-child
-      margin-top -4rem
-      margin-bottom 1rem
-
-      + p, + pre, + .custom-block
-        margin-top 2rem
 
   &:hover .header-anchor
     opacity: 1

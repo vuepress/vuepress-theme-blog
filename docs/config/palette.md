@@ -22,7 +22,6 @@ $footerColor = #828282
 $newsletterBgColor = #f8f8f8
 
 // layout
-$navbarHeight = 5rem
 $contentWidth = 740px
 
 // responsive breakpoints
