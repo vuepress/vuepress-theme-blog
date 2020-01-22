@@ -1,3 +1,36 @@
+# [2.0.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.7.1...v2.0.0) (2020-01-22)
+
+
+### Bug Fixes
+
+* text overflow on mobile ([#56](https://github.com/ulivz/vuepress-theme-blog/issues/56)) ([2e96314](https://github.com/ulivz/vuepress-theme-blog/commit/2e9631403b2298ccd385764b6ee4df2169c28a50))
+
+
+### Features
+
+* deprecate modifyBlogPluginOptions ([#57](https://github.com/ulivz/vuepress-theme-blog/issues/57)) ([ad5c100](https://github.com/ulivz/vuepress-theme-blog/commit/ad5c100803d71499947be8b158bf792d29e1261c))
+* display post meta (close [#32](https://github.com/ulivz/vuepress-theme-blog/issues/32))([#52](https://github.com/ulivz/vuepress-theme-blog/issues/52)) ([a689ada](https://github.com/ulivz/vuepress-theme-blog/commit/a689adaa16087912c2c8bc073d84626cdf6af272))
+* generate content title from frontmatter ([#51](https://github.com/ulivz/vuepress-theme-blog/issues/51)) ([50abb08](https://github.com/ulivz/vuepress-theme-blog/commit/50abb089026b9495bbe1761cd2ab3e8796680b1c))
+
+
+### BREAKING CHANGES
+
+* Turn default frontmatter key to tags instead of tag/tags
+* Require title in front matter
+* Deprecate `modifyBlogPluginOptions`
+
+
+
+## [1.7.1](https://github.com/ulivz/vuepress-theme-blog/compare/v1.7.0...v1.7.1) (2020-01-19)
+
+
+### Bug Fixes
+
+* feed doesn't work fine when useing non-default directory name ([27405f8](https://github.com/ulivz/vuepress-theme-blog/commit/27405f872aaceb480e687dd4de043cd4b3dbe458))
+* remove mixed support & un-used css ([2bf23dd](https://github.com/ulivz/vuepress-theme-blog/commit/2bf23dd021463679a79ccaffe6d9c613bf3fd52b))
+
+
+
 ## [1.7.1](https://github.com/ulivz/vuepress-theme-blog/compare/v1.7.0...v1.7.1) (2020-01-19)
 
 
