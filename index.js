@@ -48,50 +48,42 @@ module.exports = themeConfig => {
     },
   }
 
-  const { modifyBlogPluginOptions } = themeConfig
-
-  let blogPluginOptions
-
-  if (typeof modifyBlogPluginOptions === 'function') {
-    blogPluginOptions = modifyBlogPluginOptions(defaultBlogPluginOptions)
-  } else {
-    let resolvedFeedOptions
-    const isFeedEnabled = themeConfig.feed && themeConfig.feed.canonical_base
-    if (isFeedEnabled) {
-      const {
-        rss = true,
-        atom = false,
-        json = false,
-        ...feedOptions
-      } = themeConfig.feed
-      resolvedFeedOptions = Object.assign({}, feedOptions, {
-        feeds: {
-          rss2: { enable: rss },
-          atom1: { enable: atom },
-          json1: { enable: json },
-        },
-      })
-    }
-
-    const properties = [
-      'directories',
-      'frontmatters',
-      'globalPagination',
-      'sitemap',
-      'comment',
-      'newsletter',
-    ]
-    const themeConfigPluginOptions = {
-      ...pick(themeConfig, properties),
-      feed: resolvedFeedOptions,
-    }
-
-    blogPluginOptions = Object.assign(
-      {},
-      defaultBlogPluginOptions,
-      themeConfigPluginOptions
-    )
+  let resolvedFeedOptions
+  const isFeedEnabled = themeConfig.feed && themeConfig.feed.canonical_base
+  if (isFeedEnabled) {
+    const {
+      rss = true,
+      atom = false,
+      json = false,
+      ...feedOptions
+    } = themeConfig.feed
+    resolvedFeedOptions = Object.assign({}, feedOptions, {
+      feeds: {
+        rss2: { enable: rss },
+        atom1: { enable: atom },
+        json1: { enable: json },
+      },
+    })
   }
+
+  const properties = [
+    'directories',
+    'frontmatters',
+    'globalPagination',
+    'sitemap',
+    'comment',
+    'newsletter',
+  ]
+  const themeConfigPluginOptions = {
+    ...pick(themeConfig, properties),
+    feed: resolvedFeedOptions,
+  }
+
+  const blogPluginOptions = Object.assign(
+    {},
+    defaultBlogPluginOptions,
+    themeConfigPluginOptions
+  )
 
   /**
    * Integrate plugins
