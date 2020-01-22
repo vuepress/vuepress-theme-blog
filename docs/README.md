@@ -12,42 +12,7 @@ next: /config/
 
 You must distinguish between [official blog plugin](https://vuepress-plugin-blog.ulivz.com/) and this theme. Both of them are maintained by [VuePress](https://vuepress.vuejs.org/). We try to implement all the common and necessary blog features in the plugin, and pay more attention to the interactive experience in the theme. So, the plugin might be reused in several blog themes, and this theme is one of them.
 
-## Quick Start
 
-To make it easier to get started, you can use [create-vuepress](https://github.com/vuepressjs/create-vuepress) which is indeed an npm package, but it doesn’t mean you need to install it manually first. Here's an example:
-
-Step 1: Scaffolding out a VuePress blog
-```bash
-yarn create vuepress [blogName]
-
-# And answer the following questions in CLI, for instance:
-
-# ? Select the boilerplate type blog
-
-# ? What's the name of your project? blog
-
-# ? What's the description of your project? Billyyyyy3320's personal website
-
-# ? What's your email? newsbielt703@gmail.com
-
-# ? What's your name? Billy Chin
-
-# ? What's the repo of your project. https://github.com/newsbielt703/Billy
-
-cd [blogName] && yarn
-```
-
-Step 2: Develop & Build
-
-```bash
-# Run localhost
-yarn dev
-
-# Build your VP blog
-yarn build
-```
-
-By default, VuePress dev server is listening at `http://localhost:8080/`, whereas the built files will be in `.vuepress/dist`.
 
 ## Getting Started from scratch
 
@@ -172,7 +137,52 @@ location: Taipei
 ---
 ```
 
-### Final
+## Quick Start
+
+To make it easier to get started, you can use [create-vuepress](https://github.com/vuepressjs/create-vuepress) which is indeed an npm package, but it doesn’t mean you need to install it manually first. Here's an example:
+
+Step 1: Scaffolding out a VuePress blog
+```bash
+yarn create vuepress [blogName]
+
+# And answer the following questions in CLI, for instance:
+
+# ? Select the boilerplate type blog
+
+# ? What's the name of your project? blog
+
+# ? What's the description of your project? Billyyyyy3320's personal website
+
+# ? What's your email? newsbielt703@gmail.com
+
+# ? What's your name? Billy Chin
+
+# ? What's the repo of your project. https://github.com/newsbielt703/Billy
+
+cd [blogName] && yarn
+```
+
+Step 2: Develop & Build
+
+```bash
+# Run localhost
+yarn dev
+
+# Build your VP blog
+yarn build
+```
+
+By default, VuePress dev server is listening at `http://localhost:8080/`, whereas the built files will be in `.vuepress/dist`.
+
+:::warning
+Currently, [create-vuepress](https://github.com/vuepressjs/create-vuepress) won't install the latest version of `@vuepress/theme-blog`, you have to update it manually by running `yarn add @vuepress/theme-blog -D`. 
+
+Beware that we have made some breaking changes in v2.0, you also have to make some changes manually. here's the changelog.
+
+However, it's still a convenient tool to help you scaffold out a new project with a set of predefined templates.
+:::
+
+## Final
 
 Now, Check out your blog at `localhost:8080`, if everything is ok, you might be interested in the following topics:
 
