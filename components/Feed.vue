@@ -2,7 +2,7 @@
   <a
     v-if="getFirstEnabledFeed"
     class="feed"
-    :href="getFirstEnabledFeed | getFeedFileName"
+    :href="getFirstEnabledFeed | getFeedFilePath"
   >
     <RssIcon />
   </a>
@@ -14,10 +14,10 @@ import { RssIcon } from 'vue-feather-icons'
 export default {
   components: { RssIcon },
   filters: {
-    getFeedFileName(feed) {
-      if (feed === 'rss') return 'rss.xml'
-      if (feed === 'atom') return 'feed.atom'
-      if (feed === 'json') return 'feed.json'
+    getFeedFilePath(feed) {
+      if (feed === 'rss') return '/rss.xml'
+      if (feed === 'atom') return '/feed.atom'
+      if (feed === 'json') return '/feed.json'
       return ''
     },
   },
