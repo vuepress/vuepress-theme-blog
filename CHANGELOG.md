@@ -1,3 +1,12 @@
+## [2.0.2](https://github.com/ulivz/vuepress-theme-blog/compare/v2.0.1...v2.0.2) (2020-01-25)
+
+
+### Bug Fixes
+
+* web feed link should be absolute path ([#59](https://github.com/ulivz/vuepress-theme-blog/issues/59)) ([577477a](https://github.com/ulivz/vuepress-theme-blog/commit/577477af485b87a7ad5f5f8bdad2b14490af7d56))
+
+
+
 ## [2.0.1](https://github.com/ulivz/vuepress-theme-blog/compare/v2.0.0...v2.0.1) (2020-01-25)
 
 
