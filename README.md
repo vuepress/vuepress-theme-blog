@@ -2,10 +2,6 @@
 
 [![NPM version](https://badgen.net/npm/v/@vuepress/theme-blog)](https://npmjs.com/package/@vuepress/theme-blog) [![NPM downloads](https://badgen.net/npm/dm/@vuepress/theme-blog)](https://npmjs.com/package/@vuepress/theme-blog)
 [![NPM LICENSE](https://badgen.net/npm/license/@vuepress/theme-blog)](https://github.com/vuepressjs/vuepress-theme-blog/blob/master/LICENSE)
-
-## Status: WIP
-
-This theme is still working in progress, feel free to open an issue about anything that you think can be better, **contribution welcome❤️**!
  
 ## Sites
 
