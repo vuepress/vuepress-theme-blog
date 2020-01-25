@@ -1,3 +1,13 @@
+## [2.0.1](https://github.com/ulivz/vuepress-theme-blog/compare/v2.0.0...v2.0.1) (2020-01-25)
+
+
+### Bug Fixes
+
+* `location` shouldn't be required when setting `author` in front matter ([#58](https://github.com/ulivz/vuepress-theme-blog/issues/58)) ([654a971](https://github.com/ulivz/vuepress-theme-blog/commit/654a971e7363cfaf013aa7c666b55377a0a5e843))
+* too much padding at top of page ([c0bc780](https://github.com/ulivz/vuepress-theme-blog/commit/c0bc7801f51e050a1af0548831992d72f0d1d9a2))
+
+
+
 # [2.0.0](https://github.com/ulivz/vuepress-theme-blog/compare/v1.7.1...v2.0.0) (2020-01-22)
 
 
