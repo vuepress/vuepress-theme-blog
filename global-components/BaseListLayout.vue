@@ -13,10 +13,10 @@
 
         <div v-if="page.frontmatter.author" class="ui-post-meta ui-post-author">
           <NavigationIcon />
-          <span
-            >{{ page.frontmatter.author }} in
-            {{ page.frontmatter.location }}</span
-          >
+          <span>{{ page.frontmatter.author }}</span>
+          <span v-if="page.frontmatter.location">
+            &nbsp; in {{ page.frontmatter.location }}
+          </span>
         </div>
 
         <div v-if="page.frontmatter.date" class="ui-post-meta ui-post-date">
