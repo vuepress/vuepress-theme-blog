@@ -75,6 +75,11 @@ h1, h2, h3, h4, h5, h6
   line-height 1.25
   font-family PT Serif
 
+  {$contentClass}:not(.custom) > &
+    margin-top 'calc(0.5rem - %s)' % ($headerHeight)
+    padding-top 'calc(%s + 1rem)' % ($headerHeight)
+    margin-bottom 0
+
   &:hover .header-anchor
     opacity: 1
 

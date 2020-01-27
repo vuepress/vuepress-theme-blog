@@ -40,6 +40,7 @@ export default {
   position fixed
   top 0
   width 100vw
+  height $headerHeight
   box-sizing border-box
   background-color $headerBgColor
   padding 20px 32px 20px
