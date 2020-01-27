@@ -1,3 +1,12 @@
+## [2.0.3](https://github.com/ulivz/vuepress-theme-blog/compare/v2.0.2...v2.0.3) (2020-01-27)
+
+
+### Bug Fixes
+
+* section links should not be covered by navbar (fix [#60](https://github.com/ulivz/vuepress-theme-blog/issues/60))([#61](https://github.com/ulivz/vuepress-theme-blog/issues/61)) ([89b08b6](https://github.com/ulivz/vuepress-theme-blog/commit/89b08b6117d8ffcc4dc60bae4f703515516fe55b))
+
+
+
 ## [2.0.2](https://github.com/ulivz/vuepress-theme-blog/compare/v2.0.1...v2.0.2) (2020-01-25)
 
 
