@@ -205,8 +205,8 @@ Pagination config for all directories and frontmatters. For example:
 
 ```JavaScript
 {
-  prevText:'下一頁', // Text for previous links.
-  nextText:'上一頁', // Text for next links.
+  prevText:'上一頁', // Text for previous links.
+  nextText:'下一頁', // Text for next links.
   lengthPerPage:'2', // Maximum number of posts per page.
   layout:'Pagination', // Layout for pagination page
 }
