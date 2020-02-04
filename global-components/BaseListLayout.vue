@@ -1,40 +1,69 @@
 <template>
   <div id="base-list-layout">
-    <div class="ui-posts">
-      <div v-for="page in pages" :key="page.key" class="ui-post">
-        <div class="ui-post-title">
-          <NavLink :link="page.path">{{ page.title }}</NavLink>
-        </div>
+    <div class="ui-posts" itemscope itemtype="http://schema.org/Blog">
+      <article
+        v-for="page in pages"
+        :key="page.key"
+        class="ui-post"
+        itemprop="blogPost"
+        itemscope
+        itemtype="https://schema.org/BlogPosting"
+      >
+        <meta itemprop="mainEntityOfPage" :content="page.path" />
+        <meta
+          v-if="page.lastUpdated"
+          itemprop="dateModified"
+          :content="page.lastUpdated"
+        />
 
-        <p class="ui-post-summary">
+        <header class="ui-post-title" itemprop="name headline">
+          <NavLink :link="page.path">{{ page.title }}</NavLink>
+        </header>
+
+        <p class="ui-post-summary" itemprop="description">
           {{ page.frontmatter.summary || page.summary }}
           <!-- <Content :page-key="page.key" slot-key="intro"/>-->
         </p>
 
-        <div v-if="page.frontmatter.author" class="ui-post-meta ui-post-author">
-          <NavigationIcon />
-          <span>{{ page.frontmatter.author }}</span>
-          <span v-if="page.frontmatter.location">
-            &nbsp; in {{ page.frontmatter.location }}
-          </span>
-        </div>
-
-        <div v-if="page.frontmatter.date" class="ui-post-meta ui-post-date">
-          <ClockIcon />
-          <span>{{ resolvePostDate(page.frontmatter.date) }}</span>
-        </div>
-
-        <div v-if="page.frontmatter.tags" class="ui-post-meta ui-post-tag">
-          <TagIcon />
-          <router-link
-            v-for="tag in resolvePostTags(page.frontmatter.tags)"
-            :key="tag"
-            :to="'/tag/' + tag"
+        <footer>
+          <div
+            v-if="page.frontmatter.author"
+            class="ui-post-meta ui-post-author"
           >
-            {{ tag }}
-          </router-link>
-        </div>
-      </div>
+            <NavigationIcon />
+            <span itemprop="author">{{ page.frontmatter.author }}</span>
+            <span v-if="page.frontmatter.location">
+              &nbsp; in {{ page.frontmatter.location }}
+            </span>
+          </div>
+
+          <div v-if="page.frontmatter.date" class="ui-post-meta ui-post-date">
+            <ClockIcon />
+            <time
+              pubdate
+              itemprop="datePublished"
+              :datetime="page.frontmatter.date"
+            >
+              {{ resolvePostDate(page.frontmatter.date) }}
+            </time>
+          </div>
+
+          <div
+            v-if="page.frontmatter.tags"
+            class="ui-post-meta ui-post-tag"
+            itemprop="keywords"
+          >
+            <TagIcon />
+            <router-link
+              v-for="tag in resolvePostTags(page.frontmatter.tags)"
+              :key="tag"
+              :to="'/tag/' + tag"
+            >
+              {{ tag }}
+            </router-link>
+          </div>
+        </footer>
+      </article>
     </div>
 
     <component
