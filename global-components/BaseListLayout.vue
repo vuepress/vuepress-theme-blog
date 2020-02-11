@@ -29,10 +29,13 @@
           <div
             v-if="page.frontmatter.author"
             class="ui-post-meta ui-post-author"
+            itemprop="publisher"
+            itemtype="http://schema.org/Person"
+            itemscope
           >
             <NavigationIcon />
-            <span itemprop="author">{{ page.frontmatter.author }}</span>
-            <span v-if="page.frontmatter.location">
+            <span itemprop="name">{{ page.frontmatter.author }}</span>
+            <span v-if="page.frontmatter.location" itemprop="address">
               &nbsp; in {{ page.frontmatter.location }}
             </span>
           </div>
