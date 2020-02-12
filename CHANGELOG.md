@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/ulivz/vuepress-theme-blog/compare/v2.0.3...v2.1.0) (2020-02-12)
+
+
+### Features
+
+* add microdatas ([#64](https://github.com/ulivz/vuepress-theme-blog/issues/64)) ([2bdb39b](https://github.com/ulivz/vuepress-theme-blog/commit/2bdb39b27cec2ffd89e2bf7469fd322cce90fd73))
+
+
+
 ## [2.0.3](https://github.com/ulivz/vuepress-theme-blog/compare/v2.0.2...v2.0.3) (2020-01-27)
 
 
