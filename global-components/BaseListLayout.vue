@@ -24,7 +24,7 @@
           <div
             v-if="page.frontmatter.author"
             class="ui-post-meta ui-post-author"
-            itemprop="publisher"
+            itemprop="publisher author"
             itemtype="http://schema.org/Person"
             itemscope
           >

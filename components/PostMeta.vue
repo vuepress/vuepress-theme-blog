@@ -3,7 +3,7 @@
     <div
       v-if="author"
       class="post-meta-author"
-      itemprop="publisher"
+      itemprop="publisher author"
       itemtype="http://schema.org/Person"
       itemscope
     >
