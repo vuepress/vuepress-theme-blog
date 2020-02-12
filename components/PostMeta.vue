@@ -1,13 +1,23 @@
 <template>
   <div class="post-meta">
-    <div v-if="author" class="post-meta-author">
-      <NavigationIcon /> {{ author }}
-      <span v-if="location"> &nbsp; in {{ location }}</span>
+    <div
+      v-if="author"
+      class="post-meta-author"
+      itemprop="publisher author"
+      itemtype="http://schema.org/Person"
+      itemscope
+    >
+      <NavigationIcon />
+      <span itemprop="name">{{ author }}</span>
+      <span v-if="location" itemprop="address"> &nbsp; in {{ location }}</span>
     </div>
     <div v-if="date" class="post-meta-date">
-      <ClockIcon /> {{ resolvedDate }}
+      <ClockIcon />
+      <time pubdate itemprop="datePublished" :datetime="date">
+        {{ resolvedDate }}
+      </time>
     </div>
-    <ul v-if="tags" class="post-meta-tags">
+    <ul v-if="tags" class="post-meta-tags" itemprop="keywords">
       <PostTag v-for="tag in resolvedTags" :key="tag" :tag="tag" />
     </ul>
   </div>

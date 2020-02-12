@@ -1,18 +1,28 @@
 <template>
   <div id="vuepress-theme-blog__post-layout">
-    <div class="vuepress-blog-theme-content">
-      <h1 class="post-title">{{ $frontmatter.title }}</h1>
-      <PostMeta
-        :tags="$frontmatter.tags"
-        :author="$frontmatter.author"
-        :date="$frontmatter.date"
-        :location="$frontmatter.location"
-      />
-      <Content />
-      <Newsletter v-if="$service.email.enabled" />
-      <hr />
-      <Comment />
-    </div>
+    <article
+      class="vuepress-blog-theme-content"
+      itemscope
+      itemtype="https://schema.org/BlogPosting"
+    >
+      <header>
+        <h1 class="post-title" itemprop="name headline">
+          {{ $frontmatter.title }}
+        </h1>
+        <PostMeta
+          :tags="$frontmatter.tags"
+          :author="$frontmatter.author"
+          :date="$frontmatter.date"
+          :location="$frontmatter.location"
+        />
+      </header>
+      <Content itemprop="articleBody" />
+      <footer>
+        <Newsletter v-if="$service.email.enabled" />
+        <hr />
+        <Comment />
+      </footer>
+    </article>
     <Toc />
   </div>
 </template>
