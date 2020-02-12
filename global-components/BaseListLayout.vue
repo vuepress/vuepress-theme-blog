@@ -10,11 +10,6 @@
         itemtype="https://schema.org/BlogPosting"
       >
         <meta itemprop="mainEntityOfPage" :content="page.path" />
-        <meta
-          v-if="page.lastUpdated"
-          itemprop="dateModified"
-          :content="page.lastUpdated"
-        />
 
         <header class="ui-post-title" itemprop="name headline">
           <NavLink :link="page.path">{{ page.title }}</NavLink>
