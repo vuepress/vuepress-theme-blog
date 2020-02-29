@@ -93,7 +93,9 @@ export default {
 
   computed: {
     pages() {
-      return this.$pagination.pages
+      return this.$pagination.pages.filter(page => {
+        return !page.frontmatter.secret
+      })
     },
   },
 

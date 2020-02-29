@@ -112,3 +112,19 @@ e.g.
 summary: Here's a quick post on what I found.
 ---
 ```
+
+## secret
+
+- Type: `boolean`
+- Default: `undefined`
+- Required: `false`
+
+If `secret` set to true, post will not be displayed in the blog list, but still searchable and accessible via link. 
+
+e.g.
+
+```markdown
+---
+secret: true
+---
+```
