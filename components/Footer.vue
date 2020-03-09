@@ -133,7 +133,7 @@ ol, ul
   padding 0
 
 .footer
-  height 60px
+  min-height 60px
   box-sizing border-box
   background-color $footerBgColor
   display flex
@@ -146,9 +146,10 @@ ol, ul
 
     .contact
       display flex
+      flex-wrap wrap
+      justify-content center
 
       .contact-item
-        flex 1
         margin-right 10px
 
         a
@@ -194,7 +195,7 @@ ol, ul
 
 @media (max-width: $MQMobile)
   .footer
-    height 100px
+    min-height 100px
     flex-direction column
 
     .footer-left-wrap
