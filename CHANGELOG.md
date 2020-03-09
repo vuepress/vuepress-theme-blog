@@ -1,3 +1,18 @@
+# [2.2.0](https://github.com/ulivz/vuepress-theme-blog/compare/v2.1.0...v2.2.0) (2020-03-09)
+
+
+### Bug Fixes
+
+* wrap overflow contact types ([12bfe80](https://github.com/ulivz/vuepress-theme-blog/commit/12bfe803b3f66b1e5ed8f28f8eb8846f4fab8b03))
+
+
+### Features
+
+* add several contact types (close [#69](https://github.com/ulivz/vuepress-theme-blog/issues/69))([#72](https://github.com/ulivz/vuepress-theme-blog/issues/72)) ([323e0bf](https://github.com/ulivz/vuepress-theme-blog/commit/323e0bfaebbafb6f4dfbb4e7fe3d5be095b5505d))
+* choose FOUT over FOIT ([#71](https://github.com/ulivz/vuepress-theme-blog/issues/71)) ([a9c6cd5](https://github.com/ulivz/vuepress-theme-blog/commit/a9c6cd5776338eec8981672ee434f63340dd5663))
+
+
+
 # [2.1.0](https://github.com/ulivz/vuepress-theme-blog/compare/v2.0.3...v2.1.0) (2020-02-12)
 
 
