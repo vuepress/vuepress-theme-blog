@@ -79,6 +79,8 @@ module.exports = {
 
 For now `ContactType` supports following enums:
 
+- codepen
+- codesandbox
 - facebook
 - github
 - gitlab
@@ -86,10 +88,12 @@ For now `ContactType` supports following enums:
 - linkedin
 - mail
 - messenger
+- music
 - phone
 - twitter
+- video
 - web
-- codepen
+- youtube
 
 ::: tip
 Welcome contribution of adding more built-in contact type.

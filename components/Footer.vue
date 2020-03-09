@@ -28,6 +28,7 @@
 <script>
 import {
   CodepenIcon,
+  CodesandboxIcon,
   FacebookIcon,
   GithubIcon,
   GitlabIcon,
@@ -36,13 +37,17 @@ import {
   LinkedinIcon,
   MailIcon,
   MessageSquareIcon,
+  MusicIcon,
   PhoneIcon,
   TwitterIcon,
+  VideoIcon,
+  YoutubeIcon,
 } from 'vue-feather-icons'
 
 export default {
   components: {
     CodepenIcon,
+    CodesandboxIcon,
     FacebookIcon,
     GithubIcon,
     GitlabIcon,
@@ -51,8 +56,11 @@ export default {
     LinkedinIcon,
     MailIcon,
     MessageSquareIcon,
+    MusicIcon,
     PhoneIcon,
     TwitterIcon,
+    VideoIcon,
+    YoutubeIcon,
   },
 
   computed: {
@@ -80,6 +88,10 @@ export default {
   methods: {
     getIconComponentName(contactType) {
       switch (contactType) {
+        case 'codepen':
+          return 'CodepenIcon'
+        case 'codesandbox':
+          return 'CodesandboxIcon'
         case 'facebook':
           return 'FacebookIcon'
         case 'github':
@@ -94,14 +106,18 @@ export default {
           return 'MailIcon'
         case 'messenger':
           return 'MessageSquareIcon'
+        case 'music':
+          return 'MusicIcon'
         case 'phone':
           return 'PhoneIcon'
         case 'twitter':
           return 'TwitterIcon'
+        case 'video':
+          return 'VideoIcon'
         case 'web':
           return 'GlobeIcon'
-        case 'codepen':
-          return 'CodepenIcon'
+        case 'youtube':
+          return 'YoutubeIcon'
         default:
           return ''
       }

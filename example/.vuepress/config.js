@@ -35,47 +35,63 @@ module.exports = {
       contact: [
         {
           type: 'codepen',
-          link: '#',
+          link: '/',
+        },
+        {
+          type: 'codesandbox',
+          link: '/',
         },
         {
           type: 'facebook',
-          link: '#',
+          link: '/',
         },
         {
           type: 'github',
-          link: 'https://github.com/ulivz',
+          link: 'https://github.com/vuepressjs/vuepress-theme-blog',
         },
         {
           type: 'gitlab',
-          link: '#',
+          link: '/',
         },
         {
           type: 'instagram',
-          link: '#',
+          link: '/',
         },
         {
           type: 'linkedin',
-          link: '#',
+          link: '/',
         },
         {
           type: 'mail',
-          link: '#',
+          link: '/',
         },
         {
           type: 'messenger',
-          link: '#',
+          link: '/',
+        },
+        {
+          type:'music',
+          link:'/'
         },
         {
           type: 'phone',
-          link: '#',
+          link: '/',
         },
         {
           type: 'twitter',
-          link: 'https://twitter.com/_ulivz',
+          link: 'https://twitter.com/vuepressjs',
+        },
+        {
+          type:'video',
+          link:'/'
         },
         {
           type: 'web',
-          link: '#',
+          link: '/',
+        },
+        {
+          type: 'youtube',
+          link: '/'
         }
       ],
       copyright: [
