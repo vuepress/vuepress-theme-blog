@@ -38,5 +38,5 @@ Reference:
 - [palette-styl](https://vuepress.vuejs.org/config/#styling)
 
 :::tip Tip
-Another easy approach to modify styles is [index.stly](https://vuepress.vuejs.org/config/#index-styl). The extra styles you add has a higher priority than what this theme provides.
+Another easy approach to modify styles is [index.styl](https://vuepress.vuejs.org/config/#index-styl). The extra styles you add has a higher priority than what this theme provides.
 :::
