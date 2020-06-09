@@ -10,6 +10,8 @@ location: Hangzhou
 
 VuePress implements a content distribution API for Markdown. With this feature, you can split your document into multiple fragments to facilitate flexible composition in the layout component.
 
+<!-- more -->
+
 ## Why do I need Markdown Slot?
 
 First, let's review the relationship between layout components and markdown files:

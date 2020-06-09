@@ -20,6 +20,8 @@ To write a theme, create a `.vuepress/theme` directory in your docs root, and th
 
 From there it's the same as developing a normal Vue application. It is entirely up to you how to organize your theme.
 
+<!-- more -->
+
 ## Content Outlet
 
 The compiled content of the current `.md` file being rendered will be available as a special `<Content/>` global component. You will need to render it somewhere in your layout in order to display the content of the page. The simplest theme can be just a single `Layout.vue` component with the following content:
@@ -167,10 +169,6 @@ Finally, don't forget that `this.$route` and `this.$router` are also available a
 ::: tip
   `lastUpdated` is the UNIX timestamp of this file's last git commit, for more details, refer to [Last Updated](../theme/default-theme-config.md#last-updated).
 :::
-
-## Content Excerpt
-
-If a markdown file contains a `<!-- more -->` comment, any content above the comment will be extracted and exposed as `$page.excerpt`. If you are building custom theme for blogging, this data can be used to render a post list with excerpts.
 
 ## App Level Enhancements
 
