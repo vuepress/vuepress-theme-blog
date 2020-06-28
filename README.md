@@ -32,10 +32,10 @@ module.exports = {
 }
 ```
 
-## Author
+## LICENSE
 
-**@vuepress/theme-blog** © [ULIVZ](https://github.com/ulivz), Released under the [MIT](./LICENSE) License.<br>
+**@vuepress/theme-blog** © [ULIVZ](https://github.com/ulivz) & [Billyyyyy3320](https://github.com/billyyyyy3320), Released under the [MIT](./LICENSE) License.<br>
 
 > [github.com/ulivz](https://github.com/ulivz) · GitHub [@ULIVZ](https://github.com/ulivz) · Twitter [@_ulivz](https://twitter.com/_ulivz)
 
-
+> [github.com/billyyyyy3320](https://github.com/billyyyyy3320) · GitHub [@Billyyyyy3320](https://github.com/billyyyyy3320) 
