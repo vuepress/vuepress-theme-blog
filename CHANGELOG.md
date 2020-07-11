@@ -1,3 +1,17 @@
+# [2.3.0](https://github.com/ulivz/vuepress-theme-blog/compare/v2.2.0...v2.3.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* cannot click tag labels on outside of the text (fix [#84](https://github.com/ulivz/vuepress-theme-blog/issues/84)) ([#85](https://github.com/ulivz/vuepress-theme-blog/issues/85)) ([4ae4231](https://github.com/ulivz/vuepress-theme-blog/commit/4ae42313a4afe8684bd1a8406851fce35cf5cfb2))
+
+
+### Features
+
+* support using content excerpt as summary ([#83](https://github.com/ulivz/vuepress-theme-blog/issues/83)) ([2ed2d27](https://github.com/ulivz/vuepress-theme-blog/commit/2ed2d273530876e21c5873d206548becc0fa27f8))
+
+
+
 # [2.2.0](https://github.com/ulivz/vuepress-theme-blog/compare/v2.1.0...v2.2.0) (2020-03-09)
 
 
