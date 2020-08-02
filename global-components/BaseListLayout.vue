@@ -14,18 +14,19 @@
         <header class="ui-post-title" itemprop="name headline">
           <NavLink :link="page.path">{{ page.title }}</NavLink>
         </header>
-        <!-- eslint-disable vue/no-v-html -->
-        <p
-          v-if="page.excerpt"
-          class="ui-post-summary"
-          itemprop="description"
-          v-html="page.excerpt"
-        />
-        <!-- eslint-enable vue/no-v-html -->
-        <p v-else class="ui-post-summary" itemprop="description">
-          {{ page.frontmatter.summary || page.summary }}
-        </p>
-
+        <client-only>
+          <!-- eslint-disable vue/no-v-html -->
+          <p
+            v-if="page.excerpt"
+            class="ui-post-summary"
+            itemprop="description"
+            v-html="page.excerpt"
+          />
+          <!-- eslint-enable vue/no-v-html -->
+          <p v-else class="ui-post-summary" itemprop="description">
+            {{ page.frontmatter.summary || page.summary }}
+          </p>
+        </client-only>
         <footer>
           <div
             v-if="page.frontmatter.author"
