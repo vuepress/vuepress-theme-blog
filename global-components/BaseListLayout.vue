@@ -14,14 +14,16 @@
         <header class="ui-post-title" itemprop="name headline">
           <NavLink :link="page.path">{{ page.title }}</NavLink>
         </header>
-        <!-- eslint-disable vue/no-v-html -->
-        <p
-          v-if="page.excerpt"
-          class="ui-post-summary"
-          itemprop="description"
-          v-html="page.excerpt"
-        />
-        <!-- eslint-enable vue/no-v-html -->
+
+        <client-only v-if="page.excerpt">
+          <!-- eslint-disable vue/no-v-html -->
+          <p
+            class="ui-post-summary"
+            itemprop="description"
+            v-html="page.excerpt"
+          />
+          <!-- eslint-enable vue/no-v-html -->
+        </client-only>
         <p v-else class="ui-post-summary" itemprop="description">
           {{ page.frontmatter.summary || page.summary }}
         </p>
