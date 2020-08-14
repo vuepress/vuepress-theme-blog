@@ -4,6 +4,12 @@
 
 const vuepressThemeBlog = require('../')
 
+jest.mock('path', () => {
+  return {
+    resolve: (_, p) => p,
+  }
+})
+
 test('should be a function', () => {
   expect(typeof vuepressThemeBlog).toBe('function')
 })

@@ -21,7 +21,7 @@ Object {
 exports[`should match snapshot without any configuration 2`] = `
 Object {
   "alias": Object {
-    "fonts": "/Users/billy/Desktop/vuepress-projects/vuepress-theme-blog/fonts",
+    "fonts": "fonts",
   },
   "define": Object {
     "THEME_BLOG_PAGINATION_COMPONENT": "Pagination",
