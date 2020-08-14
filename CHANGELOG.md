@@ -1,3 +1,12 @@
+## [2.3.1](https://github.com/ulivz/vuepress-theme-blog/compare/v2.3.0...v2.3.1) (2020-08-14)
+
+
+### Bug Fixes
+
+* ssr hydration error on excerpt summary (fix [#89](https://github.com/ulivz/vuepress-theme-blog/issues/89)) ([#94](https://github.com/ulivz/vuepress-theme-blog/issues/94)) ([85b520c](https://github.com/ulivz/vuepress-theme-blog/commit/85b520c85e50e5b246ff37eff7bd5ce85ca300a2))
+
+
+
 # [2.3.0](https://github.com/ulivz/vuepress-theme-blog/compare/v2.2.0...v2.3.0) (2020-07-11)
 
 
