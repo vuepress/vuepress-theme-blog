@@ -352,7 +352,7 @@ You can set this option to `SimplePagination` to enable another out-of-box
 
 <img src="../assets/simple-pagination.png" width="250" height="" style=""/>
 
-You can also wirte a custom pagination component and register it as a global component. then pass its
+You can also write a custom pagination component and register it as a global component. then pass its
 name to this option.
 
 ## smoothScroll
