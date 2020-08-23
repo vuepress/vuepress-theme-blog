@@ -1,3 +1,12 @@
+## [2.3.2](https://github.com/ulivz/vuepress-theme-blog/compare/v2.3.1...v2.3.2) (2020-08-23)
+
+
+### Bug Fixes
+
+* inconsistent date in different timezone (fix [#97](https://github.com/ulivz/vuepress-theme-blog/issues/97)) ([6acb9e0](https://github.com/ulivz/vuepress-theme-blog/commit/6acb9e0105ce519df89eceed98749a2e1f9f8b8b))
+
+
+
 ## [2.3.1](https://github.com/ulivz/vuepress-theme-blog/compare/v2.3.0...v2.3.1) (2020-08-14)
 
 
