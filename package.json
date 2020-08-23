@@ -1,6 +1,6 @@
 {
   "name": "@vuepress/theme-blog",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Default blog theme for VuePress",
   "repository": {
     "type": "git",
