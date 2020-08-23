@@ -84,11 +84,14 @@
 
 import Vue from 'vue'
 import dayjs from 'dayjs'
+import dayjsPluginUTC from 'dayjs/plugin/utc'
 import { NavigationIcon, ClockIcon, TagIcon } from 'vue-feather-icons'
 import {
   Pagination,
   SimplePagination,
 } from '@vuepress/plugin-blog/lib/client/components'
+
+dayjs.extend(dayjsPluginUTC)
 
 export default {
   components: { NavigationIcon, ClockIcon, TagIcon },
@@ -124,9 +127,9 @@ export default {
     },
 
     resolvePostDate(date) {
-      return dayjs(date).format(
-        this.$themeConfig.dateFormat || 'ddd MMM DD YYYY'
-      )
+      return dayjs
+        .utc(date)
+        .format(this.$themeConfig.dateFormat || 'ddd MMM DD YYYY')
     },
 
     resolvePostTags(tags) {
