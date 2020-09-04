@@ -36,6 +36,8 @@ module.exports = {
         {
           type: 'codepen',
           link: '/',
+          text: 'codepen',
+          showTextToScreenReaderOnly: true
         },
         {
           type: 'codesandbox',

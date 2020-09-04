@@ -9,7 +9,10 @@
         >
           <NavLink :link="item.link">
             <component :is="item.iconComponent"></component>
-            {{ item.text }}
+            <span v-if="item.showTextToScreenReaderOnly" class="sr-only">{{
+              item.text
+            }}</span
+            ><template v-else>{{ item.text }}</template>
           </NavLink>
         </li>
       </ul>
@@ -69,10 +72,12 @@ export default {
         (this.$themeConfig.footer && this.$themeConfig.footer.contact) ||
         []
       )
-        .map(({ type, link }) => {
+        .map(({ type, link, text, showTextToScreenReaderOnly }) => {
           return {
             iconComponent: this.getIconComponentName(type),
             link,
+            text,
+            showTextToScreenReaderOnly,
           }
         })
         .filter(({ iconComponent }) => iconComponent)
