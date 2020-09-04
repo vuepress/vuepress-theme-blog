@@ -52,7 +52,7 @@ module.exports = {
 ### footer.contact
 
 
-- Type: `Array<{ type: ContactType, link: string }>`
+- Type: `Array<{ type: ContactType, link: string, text: string, showTextToScreenReaderOnly: bool }>`
 - Default: `undefined`
 
 Contact information, displayed on the left side of footer.
@@ -66,6 +66,8 @@ module.exports = {
         {
           type: 'github',
           link: 'https://github.com/vuejs/vuepress',
+          text: 'My Github',
+          showTextToScreenReaderOnly: true
         },
         {
           type: 'twitter',
@@ -76,6 +78,7 @@ module.exports = {
   },
 }
 ```
+When `showTextToScreenReaderOnly` is **true**, the value provided in `text` will showed only to screen readers
 
 For now `ContactType` supports following enums:
 
@@ -94,6 +97,12 @@ For now `ContactType` supports following enums:
 - video
 - web
 - youtube
+
+::: tip
+  You can use `showTextToScreenReaderOnly` to improves the navigation experience for users of screen readers and other assistive technologies
+  
+  [Ref: web.dev](https://web.dev/link-name/)
+:::
 
 ::: tip
 Welcome contribution of adding more built-in contact type.
