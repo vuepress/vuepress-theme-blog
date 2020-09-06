@@ -255,6 +255,8 @@ Vssue and Disqus are our built-in comment services. Here's the required properti
   clientSecret: 'Your clientSecret',
 }
 ```
+For setting the shortname for disqus, visit [here](https://help.disqus.com/en/articles/1717111-what-s-a-shortname)
+
 Further configuration, please visit:
 - [vuepress-plugin-disqus-comment](https://vuepress-plugin-disqus.netlify.com/#usage)
 - [vuepress-plugin-vssue](https://vssue.js.org/guide/vuepress.html#usage)
