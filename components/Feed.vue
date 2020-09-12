@@ -2,7 +2,7 @@
   <a
     v-if="getFirstEnabledFeed"
     class="feed"
-    :href="getFirstEnabledFeed | getFeedFilePath"
+    :href="getFeedFilePathWithBase"
   >
     <RssIcon />
   </a>
@@ -29,6 +29,11 @@ export default {
       }
       return false
     },
+    getFeedFilePathWithBase()
+    {
+      const path = this.$site.base + this.$options.filters.getFeedFilePath(this.getFirstEnabledFeed)
+      return path.replace(/\/+/g, '/')
+    }
   },
 }
 </script>
