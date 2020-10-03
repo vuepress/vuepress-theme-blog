@@ -302,6 +302,10 @@ Moreover, we present an easier approach to enable/disable the feed types, for in
 }
 ```
 
+::: tip
+If you plan to deploy your site under a sub path, and you have configured [base URL](https://vuepress.vuejs.org/config/#base), you won't need to pass it again to `canonical_base`.
+:::
+
 ## summary
 
 - Type: `boolean`
