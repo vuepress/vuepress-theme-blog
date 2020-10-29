@@ -22,6 +22,9 @@ export function isTel(path) {
 }
 
 export function ensureExt(path) {
+  if (!path || !path.trim()) {
+    return ''
+  }
   if (isExternal(path)) {
     return path
   }
