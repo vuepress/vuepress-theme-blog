@@ -101,6 +101,9 @@ Welcome contribution of adding more built-in contact type.
 
 ### footer.copyright
 
+- Type: `Array<{ text: string, link?: string }>`
+- Default: `undefined`
+
 Copyright information, displayed on the right side of footer.
 
 e.g.
@@ -115,7 +118,6 @@ module.exports = {
         },
         {
           text: 'MIT Licensed | Copyright © 2018-present Vue.js',
-          link: '',
         },
       ],
     },

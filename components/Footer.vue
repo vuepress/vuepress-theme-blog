@@ -18,7 +18,8 @@
     <div class="footer-right-wrap">
       <ul v-if="copyright" class="copyright">
         <li v-for="item in copyright" :key="item.text" class="copyright-item">
-          <NavLink :link="item.link">{{ item.text }}</NavLink>
+          <NavLink v-if="item.link" :link="item.link">{{ item.text }}</NavLink>
+          <template v-else>{{ item.text }}</template>
         </li>
       </ul>
     </div>
@@ -180,13 +181,14 @@ ol, ul
         position relative
         line-height 12px
         border-right 1px solid $footerColor
+        font-size 12px
+        color $footerColor
 
         &:last-child
           border-right none
 
         a
-          font-size 12px
-          color $footerColor
+          color currentColor
           text-decoration none
           transition color 0.3s
 

@@ -101,7 +101,6 @@ module.exports = {
         },
         {
           text: 'MIT Licensed | Copyright © 2018-present Vue.js',
-          link: '',
         },
       ],
     },
