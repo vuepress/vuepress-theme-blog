@@ -1,3 +1,13 @@
+## [2.3.3](https://github.com/ulivz/vuepress-theme-blog/compare/v2.3.2...v2.3.3) (2020-10-31)
+
+
+### Bug Fixes
+
+* support copyright without link (fix [#105](https://github.com/ulivz/vuepress-theme-blog/issues/105)) ([#111](https://github.com/ulivz/vuepress-theme-blog/issues/111)) ([696412d](https://github.com/ulivz/vuepress-theme-blog/commit/696412dee61ccf0c03a6f128343c136c366c9fdf))
+* web feed link 404 when set custom base ([#104](https://github.com/ulivz/vuepress-theme-blog/issues/104)) ([ea6602f](https://github.com/ulivz/vuepress-theme-blog/commit/ea6602fd29cbd93a9a7ad93881ee314bde03f437))
+
+
+
 ## [2.3.2](https://github.com/ulivz/vuepress-theme-blog/compare/v2.3.1...v2.3.2) (2020-08-23)
 
 
