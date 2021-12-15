@@ -7,7 +7,6 @@
 
 - [Documentation](https://vuepress-theme-blog.billyyyyy3320.com) - clone this repo and run `yarn && yarn docs:dev`
 - [Live Example](https://example.vuepress-theme-blog.billyyyyy3320.com/) - clone this repo and run `yarn && yarn example:dev`
-- [Live Example - ULIVZ's space](https://ulivz.com/)
 - [Live Example - Billyyyyy3320's space](https://billyyyyy3320.com/)
 
 
