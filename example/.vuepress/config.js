@@ -4,13 +4,13 @@ module.exports = {
   theme: require.resolve('../../'),
   themeConfig: {
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#dateformat
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#dateformat
      */
 
     // dateFormat: 'YYYY-MM-DD',
 
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#nav
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#nav
      */
 
     // nav: [
@@ -29,7 +29,7 @@ module.exports = {
     // ],
 
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#footer
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#footer
      */
     footer: {
       contact: [
@@ -105,7 +105,7 @@ module.exports = {
       ],
     },
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#directories
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#directories
      */
 
     // directories:[
@@ -124,7 +124,7 @@ module.exports = {
     // ],
 
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#frontmatters
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#frontmatters
      */
 
     // frontmatters: [
@@ -141,7 +141,7 @@ module.exports = {
     // ],
 
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#globalpagination
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#globalpagination
      */
 
     // globalPagination: {
@@ -149,57 +149,57 @@ module.exports = {
     // },
 
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#sitemap
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#sitemap
      */
     sitemap: {
-      hostname: 'https://example.vuepress-theme-blog.ulivz.com/'
+      hostname: 'https://example.vuepress-theme-blog.billyyyyy3320.com/'
     },
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#comment
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#comment
      */
     comment: {
       service: 'disqus',
       shortname: 'vuepress-plugin-blog',
     },
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#newsletter
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#newsletter
      */
     newsletter: {
       endpoint: 'https://billyyyyy3320.us4.list-manage.com/subscribe/post?u=4905113ee00d8210c2004e038&amp;id=bd18d40138'
     },
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#feed
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#feed
      */
     feed: {
-      canonical_base: 'https://example.vuepress-theme-blog.ulivz.com/',
+      canonical_base: 'https://example.vuepress-theme-blog.billyyyyy3320.com/',
     },
 
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#summary
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#summary
      */
 
     // summary:false,
 
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#summarylength
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#summarylength
      */
 
     // summaryLength:100,
 
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#pwa
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#pwa
      */
 
     // pwa:true,
 
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#paginationcomponent
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#paginationcomponent
      */
 
     // paginationComponent: 'SimplePagination'
 
     /**
-     * Ref: https://vuepress-theme-blog.ulivz.com/config/#smoothscroll
+     * Ref: https://vuepress-theme-blog.billyyyyy3320.com/config/#smoothscroll
      */
     smoothScroll: true
   },

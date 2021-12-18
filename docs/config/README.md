@@ -163,7 +163,7 @@ By default, pages are placed in `_post`, and the path for post list is `/`. Here
 ```
 
 Reference:
-- [document classifiers](https://vuepress-plugin-blog.ulivz.com/guide/getting-started.html#document-classifier)
+- [document classifiers](https://vuepress-plugin-blog.billyyyyy3320.com/guide/getting-started.html#document-classifier)
 
 ## frontmatters
 
@@ -201,7 +201,7 @@ Only `tag` and `tags` in front matter will be classified, and the path for it is
 ]
 ```
 Reference:
-- [Frontmatter Classifier](https://vuepress-plugin-blog.ulivz.com/guide/getting-started.html#frontmatter-classifier)
+- [Frontmatter Classifier](https://vuepress-plugin-blog.billyyyyy3320.com/guide/getting-started.html#frontmatter-classifier)
 ## globalPagination
 
 - Type: `object`
@@ -218,7 +218,7 @@ Pagination config for all directories and frontmatters. For example:
 }
 ```
 
-For more information, please visit [Pagination Config](https://vuepress-plugin-blog.ulivz.com/pagination/#sorter).
+For more information, please visit [Pagination Config](https://vuepress-plugin-blog.billyyyyy3320.com/pagination/#sorter).
 ## sitemap
 
 - Type: `object`
@@ -350,13 +350,13 @@ plugin is as follows:
 Custom the pagination component.
 
 The default is the 
-[pagination component](https://vuepress-plugin-blog.ulivz.com/components/#pagination) powerful by 
+[pagination component](https://vuepress-plugin-blog.billyyyyy3320.com/components/#pagination) powerful by 
 [@vuepress/plugin-blog](https://github.com/ulivz/vuepress-plugin-blog):
 
 <img src="../assets/pagination.png" width="250" height="" style=""/>
 
 You can set this option to `SimplePagination` to enable another out-of-box 
-[simple pagination component](https://vuepress-plugin-blog.ulivz.com/components/#simplepagination):
+[simple pagination component](https://vuepress-plugin-blog.billyyyyy3320.com/components/#simplepagination):
 
 <img src="../assets/simple-pagination.png" width="250" height="" style=""/>
 

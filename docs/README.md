@@ -10,7 +10,7 @@ next: /config/
 
 > Default blog theme for VuePress 
 
-You must distinguish between [official blog plugin](https://vuepress-plugin-blog.ulivz.com/) and this theme. Both of them are maintained by [VuePress](https://vuepress.vuejs.org/). We try to implement all the common and necessary blog features in the plugin, and pay more attention to the interactive experience in the theme. So, the plugin might be reused in several blog themes, and this theme is one of them.
+You must distinguish between [official blog plugin](https://vuepress-plugin-blog.billyyyyy3320.com/) and this theme. Both of them are maintained by [VuePress](https://vuepress.vuejs.org/). We try to implement all the common and necessary blog features in the plugin, and pay more attention to the interactive experience in the theme. So, the plugin might be reused in several blog themes, and this theme is one of them.
 
 
 
@@ -198,4 +198,4 @@ Now, Check out your blog at `localhost:8080`, if everything is ok, you might be 
 - Deploy your blog: Read [the deploy section in VuePress documentation](https://vuepress.vuejs.org/guide/deploy.html)
 - Explore deeper: 
   - Documentation of [VuePress](https://vuepress.vuejs.org/)
-  - Documentation of [official blog plugin](https://vuepress-plugin-blog.ulivz.com/)
+  - Documentation of [official blog plugin](https://vuepress-plugin-blog.billyyyyy3320.com/)
