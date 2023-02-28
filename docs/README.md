@@ -141,7 +141,7 @@ location: Taipei
 
 By default, summary will be extracted from source markdowns. If you need to override it, we present the following two approaches:
 
-1. [Writing the summary manually in frontmatter](./front-matter.md#summary)
+1. [Writing the summary manually in frontmatter](./config/front-matter.md#summary)
 
 2. [Setting up excerpt separator by writing a comment `<!-- more -->` right below what you want to extract as summary](https://vuepress.vuejs.org/theme/writing-a-theme.html#content-excerpt)
 
